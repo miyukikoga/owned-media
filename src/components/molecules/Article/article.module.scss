@@ -1,0 +1,36 @@
+.article {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  border-top: 1px solid;
+  padding: 10px;
+}
+.image {
+  justify-items: center;
+  align-items: center;
+}
+.content {
+  display: grid;
+  margin-left: 20px;
+}
+.footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+}
+.good {
+  justify-self: end;
+  padding: 10px;
+  cursor: pointer;
+}
+.category {
+  margin: 0 10px;
+}
+.time {
+  margin: 0 10px;
+}
+.overflow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 10px;
+}
