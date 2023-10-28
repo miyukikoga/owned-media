@@ -1,4 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 事前準備
+
+.env を作成します。
+
+```
+MICRO_CMS_DOMAIN=
+MICRO_CMS_API_KEY=
+```
 
 ## Getting Started
 
