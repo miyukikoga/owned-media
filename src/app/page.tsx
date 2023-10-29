@@ -1,48 +1,20 @@
-import { createClient } from "microcms-js-sdk";
+import { headers } from "next/headers";
 import { Articles } from "../components/organisms/Articles";
 import { Header } from "../components/organisms/Header";
 import { ArticlesType } from "../types/articles";
 import { mediaName } from "../constants/blog";
 import style from "./page.module.scss";
 
-async function fetchArticles(): Promise<ArticlesType> {
-  if (
-    !process.env.NEXT_PUBLIC_MICRO_CMS_DOMAIN ||
-    !process.env.NEXT_PUBLIC_MICRO_CMS_API_KEY
-  )
-    throw new Error("No environment variables");
-
-  const client = createClient({
-    serviceDomain: process.env.NEXT_PUBLIC_MICRO_CMS_DOMAIN,
-    apiKey: process.env.NEXT_PUBLIC_MICRO_CMS_API_KEY,
-  });
-
-  const res = await client.get({
-    endpoint: "blogs",
-  });
-
-  if (!res) {
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.contents.map((element: any) => {
-    // HTMLのタグを削除する
-    const regex = /(<([^>]+)>)/gi;
-    const content = element.content.replace(regex, "");
-
-    return {
-      id: element.id,
-      title: element.title,
-      content: content,
-      category: element.category.name,
-      createdAt: new Date(element.createdAt),
-      eyeCatch: element.eyecatch.url,
-    };
-  });
+async function fetchArticles(host: string): Promise<ArticlesType> {
+  const response = await fetch(`http://${host}/api`);
+  return await response.json();
 }
 
 export default async function Page() {
-  const articles = await fetchArticles();
+  const host = headers().get("host");
+  if (!host) throw new Error("Failed to get host");
+
+  const articles = await fetchArticles(host);
 
   return (
     <div className={style.page}>
