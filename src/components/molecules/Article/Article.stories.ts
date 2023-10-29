@@ -22,7 +22,7 @@ export const Default: Story = {
       title: "たけのこ",
       content: "たけのこ、美味しいね",
       category: "グルメ",
-      createdAt: new Date("2023-04-05T09:23:31.664Z"),
+      createdAt: "2023-04-05T09:23:31.664Z",
       eyeCatch:
         "https://images.microcms-assets.io/assets/cab7c47596804df6b0612f18468b57a8/6b91e158bb4244b68d5004de7753094c/blog-template.png",
     },
