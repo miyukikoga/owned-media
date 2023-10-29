@@ -6,7 +6,8 @@ import { mediaName } from "../constants/blog";
 import style from "./page.module.scss";
 
 async function fetchArticles(host: string): Promise<ArticlesType> {
-  const response = await fetch(`http://${host}/api`);
+  const protocol = process?.env.NODE_ENV === "development" ? "http" : "https";
+  const response = await fetch(`${protocol}://${host}/api/articles`);
   return await response.json();
 }
 
