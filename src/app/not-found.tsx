@@ -1,7 +1,4 @@
-"use client";
-
-import Router from "next/router";
-import { Button } from "../components/atoms/Button";
+import { MyLink } from "../components/atoms/Link";
 import { Text } from "../components/atoms/Text";
 import style from "./page.module.scss";
 
@@ -12,7 +9,7 @@ export default function NotFound() {
       <p>
         <Text>ページが見つかりません</Text>
       </p>
-      <Button onClick={() => Router.push("/")} label="Return Home" />
+      <MyLink href="/">Return Home</MyLink>
     </div>
   );
 }
