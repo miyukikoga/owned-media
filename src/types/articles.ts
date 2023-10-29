@@ -3,7 +3,7 @@ export type ArticleType = {
   title: string;
   content: string;
   category: string;
-  createdAt: Date;
+  createdAt: string;
   eyeCatch: string;
 };
 

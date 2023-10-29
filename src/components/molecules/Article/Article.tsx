@@ -18,7 +18,7 @@ export const Article = ({ article }: ArticleProps) => {
 
   const handleClick = () => setClick(!click);
 
-  const formattedDate = formateToYyyymmdd(article.createdAt);
+  const formattedDate = formateToYyyymmdd(new Date(article.createdAt));
 
   return (
     <article>
@@ -43,7 +43,7 @@ export const Article = ({ article }: ArticleProps) => {
                 <Text size="small">{article.category}</Text>
               </div>
               <span className={styles.time}>
-                <Time size="small" dateTime={article.createdAt}>
+                <Time size="small" dateTime={new Date(article.createdAt)}>
                   {formattedDate}
                 </Time>
               </span>
