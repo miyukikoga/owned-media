@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { BsHandThumbsUpFill, BsHandThumbsUp } from "react-icons/bs";
+import { format } from "date-fns";
 import { MyLink } from "../../atoms/Link";
 import { MyImage } from "../../atoms/Image";
 import { Text } from "../../atoms/Text";
@@ -18,7 +19,7 @@ export const ArticleCard = ({ article }: ArticleCardProps) => {
 
   const handleClick = () => setClick(!click);
 
-  const formattedDate = formateToYyyymmdd(new Date(article.createdAt));
+  const formattedDate = formatCreatedAt(new Date(article.createdAt));
 
   return (
     <article>
@@ -62,9 +63,11 @@ export const ArticleCard = ({ article }: ArticleCardProps) => {
   );
 };
 
-const formateToYyyymmdd = (date: Date): string => {
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
+/**
+ * 作成日をフォーマットする
+ * @param date 日付
+ * @returns フォーマットされた日付
+ */
+const formatCreatedAt = (date: Date): string => {
+  return format(date, "yyyy-MM-dd");
 };
