@@ -1,17 +1,17 @@
 import React from "react";
-import { Article } from "../../molecules/Article";
-import { ArticlesType } from "../../../types/articles";
+import { ArticleCard } from "../../molecules/Article";
+import { Articles } from "../../../types/articles";
 import styles from "./articles.module.css";
 
-type ArticlesProps = {
-  articles: ArticlesType;
+type ArticleCardsProps = {
+  articles: Articles;
 };
 
-export const Articles = ({ articles }: ArticlesProps) => {
+export const ArticleCards = ({ articles }: ArticleCardsProps) => {
   return (
     <div className={styles.articles}>
       {articles.map((article) => {
-        return <Article key={article.id} article={article} />;
+        return <ArticleCard key={article.id} article={article} />;
       })}
     </div>
   );

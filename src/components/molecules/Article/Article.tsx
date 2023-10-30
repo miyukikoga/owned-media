@@ -6,14 +6,14 @@ import { MyLink } from "../../atoms/Link";
 import { MyImage } from "../../atoms/Image";
 import { Text } from "../../atoms/Text";
 import { Time } from "../../atoms/Time";
-import { ArticleType } from "../../../types/articles";
+import { Article } from "../../../types/articles";
 import styles from "./article.module.css";
 
-type ArticleProps = {
-  article: ArticleType;
+type ArticleCardProps = {
+  article: Article;
 };
 
-export const Article = ({ article }: ArticleProps) => {
+export const ArticleCard = ({ article }: ArticleCardProps) => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);

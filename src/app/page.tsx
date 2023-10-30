@@ -1,11 +1,11 @@
 import { headers } from "next/headers";
-import { Articles } from "../components/organisms/Articles";
+import { ArticleCards } from "../components/organisms/Articles";
 import { Header } from "../components/organisms/Header";
-import { ArticlesType } from "../types/articles";
+import { Articles } from "../types/articles";
 import { mediaName } from "../constants/blog";
 import style from "./page.module.css";
 
-async function fetchArticles(host: string): Promise<ArticlesType> {
+async function fetchArticles(host: string): Promise<Articles> {
   const protocol = process?.env.NODE_ENV === "development" ? "http" : "https";
   const response = await fetch(`${protocol}://${host}/api/articles`);
   return await response.json();
@@ -20,7 +20,7 @@ export default async function Page() {
   return (
     <div className={style.page}>
       <Header>{mediaName}</Header>
-      <Articles articles={articles} />
+      <ArticleCards articles={articles} />
     </div>
   );
 }
