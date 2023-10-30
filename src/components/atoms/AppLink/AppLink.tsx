@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import Link from "next/link";
-import styles from "./link.module.css";
+import styles from "./appLink.module.css";
 
 type LinkProps = {
   tabIndex?: number;
@@ -8,7 +8,7 @@ type LinkProps = {
   href: string;
 };
 
-export const MyLink = ({ tabIndex = 0, children, ...props }: LinkProps) => {
+export const AppLink = ({ tabIndex = 0, children, ...props }: LinkProps) => {
   return (
     <Link className={styles.link} prefetch={false} {...props}>
       {children}

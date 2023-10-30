@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { MyLink } from "./Link";
+import { AppLink } from "./AppLink";
 
 const meta = {
-  title: "My/Link",
-  component: MyLink,
+  title: "My/AppLink",
+  component: AppLink,
   parameters: {
     layout: "centered",
   },
@@ -12,7 +12,7 @@ const meta = {
   argTypes: {
     href: { control: "text" },
   },
-} satisfies Meta<typeof MyLink>;
+} satisfies Meta<typeof AppLink>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

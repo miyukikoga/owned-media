@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import { BsHandThumbsUpFill, BsHandThumbsUp } from "react-icons/bs";
 import { format } from "date-fns";
-import { MyLink } from "../../atoms/Link";
-import { MyImage } from "../../atoms/Image";
+import { AppLink } from "../../atoms/AppLink";
+import { AppImage } from "../../atoms/AppImage";
 import { Text } from "../../atoms/Text";
 import { Time } from "../../atoms/Time";
 import { Article } from "../../../types/articles";
@@ -24,16 +24,16 @@ export const ArticleCard = ({ article }: ArticleCardProps) => {
   return (
     <article>
       <div className={styles.articleCard}>
-        <MyLink href={"/article/" + article.id}>
+        <AppLink href={"/article/" + article.id}>
           <div className={styles.image}>
-            <MyImage alt="article" src={article.eyeCatch} />
+            <AppImage alt="article" src={article.eyeCatch} />
           </div>
-        </MyLink>
+        </AppLink>
         <div className={styles.content}>
           <h2>
-            <MyLink href={"/article/" + article.id}>
+            <AppLink href={"/article/" + article.id}>
               <Text size="large">{article.title}</Text>
-            </MyLink>
+            </AppLink>
           </h2>
           <div className={styles.overflow}>
             <Text>{article.content}</Text>

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from "./image.module.css";
+import styles from "./appImage.module.css";
 
 type ImageProps = {
   radius?: boolean;
@@ -9,7 +9,7 @@ type ImageProps = {
   src: string;
 };
 
-export const MyImage = ({
+export const AppImage = ({
   radius = false,
   size = "medium",
   alt = "",

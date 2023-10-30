@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { MyImage } from "./Image";
+import { AppImage } from "./AppImage";
 import imageFile from "../../../../public/profile.png";
 
 const meta = {
   title: "My/Image",
-  component: MyImage,
+  component: AppImage,
   parameters: {
     layout: "centered",
   },
@@ -15,7 +15,7 @@ const meta = {
     alt: { control: "text" },
     src: { control: "text" },
   },
-} satisfies Meta<typeof MyImage>;
+} satisfies Meta<typeof AppImage>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -23,7 +23,7 @@ type Story = StoryObj<typeof meta>;
 export const Radius: Story = {
   args: {
     radius: true,
-    alt: "MyImage",
+    alt: "AppImage",
     src: imageFile.src,
   },
 };
@@ -32,7 +32,7 @@ export const Large: Story = {
   args: {
     radius: false,
     size: "large",
-    alt: "MyImage",
+    alt: "AppImage",
     src: imageFile.src,
   },
 };
@@ -40,7 +40,7 @@ export const Large: Story = {
 export const Medium: Story = {
   args: {
     size: "medium",
-    alt: "MyImage",
+    alt: "AppImage",
     src: imageFile.src,
   },
 };
@@ -48,7 +48,7 @@ export const Medium: Story = {
 export const Small: Story = {
   args: {
     size: "small",
-    alt: "MyImage",
+    alt: "AppImage",
     src: imageFile.src,
   },
 };
