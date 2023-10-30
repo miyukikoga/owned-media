@@ -1,10 +1,16 @@
 ## 事前準備
 
-.env を作成します。
+.env.local を作成します。
 
 ```
 MICRO_CMS_DOMAIN=
 MICRO_CMS_API_KEY=
+```
+
+vercel と連携後、以下コマンドでも作成できます。
+
+```bash
+vercel env pull '.env.local'
 ```
 
 ## Getting Started
