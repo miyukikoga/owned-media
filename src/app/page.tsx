@@ -3,7 +3,7 @@ import { Articles } from "../components/organisms/Articles";
 import { Header } from "../components/organisms/Header";
 import { ArticlesType } from "../types/articles";
 import { mediaName } from "../constants/blog";
-import style from "./page.module.scss";
+import style from "./page.module.css";
 
 async function fetchArticles(host: string): Promise<ArticlesType> {
   const protocol = process?.env.NODE_ENV === "development" ? "http" : "https";

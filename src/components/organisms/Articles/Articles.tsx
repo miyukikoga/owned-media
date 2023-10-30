@@ -1,7 +1,7 @@
 import React from "react";
 import { Article } from "../../molecules/Article";
 import { ArticlesType } from "../../../types/articles";
-import styles from "./articles.module.scss";
+import styles from "./articles.module.css";
 
 type ArticlesProps = {
   articles: ArticlesType;

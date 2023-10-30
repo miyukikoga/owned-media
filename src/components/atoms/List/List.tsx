@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import styles from "./list.module.scss";
+import styles from "./list.module.css";
 
 type ListProps = {
   horizontal?: boolean;

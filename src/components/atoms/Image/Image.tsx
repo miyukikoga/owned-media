@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from "./image.module.scss";
+import styles from "./image.module.css";
 
 type ImageProps = {
   radius?: boolean;

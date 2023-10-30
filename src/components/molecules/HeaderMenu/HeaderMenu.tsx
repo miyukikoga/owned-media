@@ -1,7 +1,7 @@
 import React from "react";
 import { BsPersonCircle } from "react-icons/bs";
 import { MyLink } from "../../atoms/Link";
-import styles from "./headerMenu.module.scss";
+import styles from "./headerMenu.module.css";
 
 type HeaderMenuProps = {};
 

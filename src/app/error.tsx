@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { Button } from "../components/atoms/Button";
-import style from "./page.module.scss";
+import style from "./page.module.css";
 
 export default function Error({
   error,

@@ -7,7 +7,7 @@ import { MyImage } from "../../atoms/Image";
 import { Text } from "../../atoms/Text";
 import { Time } from "../../atoms/Time";
 import { ArticleType } from "../../../types/articles";
-import styles from "./article.module.scss";
+import styles from "./article.module.css";
 
 type ArticleProps = {
   article: ArticleType;

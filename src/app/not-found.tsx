@@ -1,6 +1,6 @@
 import { MyLink } from "../components/atoms/Link";
 import { Text } from "../components/atoms/Text";
-import style from "./page.module.scss";
+import style from "./page.module.css";
 
 export default function NotFound() {
   return (

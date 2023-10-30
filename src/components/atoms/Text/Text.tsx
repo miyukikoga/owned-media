@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import styles from "./text.module.scss";
+import styles from "./text.module.css";
 
 type TextProps = {
   size?: "small" | "medium" | "large";
