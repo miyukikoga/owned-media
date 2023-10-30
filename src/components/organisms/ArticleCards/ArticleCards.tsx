@@ -1,7 +1,7 @@
 import React from "react";
-import { ArticleCard } from "../../molecules/Article";
+import { ArticleCard } from "../../molecules/ArticleCard";
 import { Articles } from "../../../types/articles";
-import styles from "./articles.module.css";
+import styles from "./articleCards.module.css";
 
 type ArticleCardsProps = {
   articles: Articles;
@@ -9,7 +9,7 @@ type ArticleCardsProps = {
 
 export const ArticleCards = ({ articles }: ArticleCardsProps) => {
   return (
-    <div className={styles.articles}>
+    <div className={styles.articleCards}>
       {articles.map((article) => {
         return <ArticleCard key={article.id} article={article} />;
       })}

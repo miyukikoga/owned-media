@@ -1,5 +1,5 @@
 import { headers } from "next/headers";
-import { ArticleCards } from "../components/organisms/Articles";
+import { ArticleCards } from "../components/organisms/ArticleCards";
 import { Header } from "../components/organisms/Header";
 import { Articles } from "../types/articles";
 import { mediaName } from "../constants/blog";

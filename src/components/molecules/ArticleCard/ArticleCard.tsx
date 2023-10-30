@@ -7,7 +7,7 @@ import { MyImage } from "../../atoms/Image";
 import { Text } from "../../atoms/Text";
 import { Time } from "../../atoms/Time";
 import { Article } from "../../../types/articles";
-import styles from "./article.module.css";
+import styles from "./articleCard.module.css";
 
 type ArticleCardProps = {
   article: Article;
@@ -22,7 +22,7 @@ export const ArticleCard = ({ article }: ArticleCardProps) => {
 
   return (
     <article>
-      <div className={styles.article}>
+      <div className={styles.articleCard}>
         <MyLink href={"/article/" + article.id}>
           <div className={styles.image}>
             <MyImage alt="article" src={article.eyeCatch} />
