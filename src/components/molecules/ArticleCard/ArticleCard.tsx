@@ -19,7 +19,7 @@ export const ArticleCard = ({ article }: ArticleCardProps) => {
 
   const handleClick = () => setClick(!click);
 
-  const formattedDate = formatCreatedAt(new Date(article.createdAt));
+  const formattedDate = formatArticleCreatedAt(new Date(article.createdAt));
 
   return (
     <article>
@@ -68,6 +68,6 @@ export const ArticleCard = ({ article }: ArticleCardProps) => {
  * @param date 日付
  * @returns フォーマットされた日付
  */
-const formatCreatedAt = (date: Date): string => {
+const formatArticleCreatedAt = (date: Date): string => {
   return format(date, "yyyy-MM-dd");
 };
