@@ -19,8 +19,8 @@ export const Default: Story = {
   args: {
     article: {
       id: "o5gu6ibjvb",
-      title: "たけのこ",
-      content: "たけのこ、美味しいね",
+      title: "ねことたけのこ",
+      content: "ねこがたけのこを食べる",
       category: "グルメ",
       createdAt: "2023-04-05T09:23:31.664Z",
       eyeCatch:
