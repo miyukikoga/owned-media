@@ -1,4 +1,5 @@
 import { createClient } from "microcms-js-sdk";
+import { MicroCMSContent } from "../../../types/microCms";
 
 export async function GET() {
   if (!process.env.MICRO_CMS_DOMAIN || !process.env.MICRO_CMS_API_KEY)
@@ -17,7 +18,10 @@ export async function GET() {
     throw new Error("Failed to fetch data");
   }
 
-  const data = res.contents.map((element: any) => {
+  const responseBody = res.contents.map((element: unknown) => {
+    if (!isMicroCMSContent(element))
+      throw Error("GET blogs APIのレスポンスの型が間違っています");
+
     // HTMLのタグを削除する
     const regex = /(<([^>]+)>)/gi;
     const content = element.content.replace(regex, "");
@@ -32,5 +36,25 @@ export async function GET() {
     };
   });
 
-  return Response.json(data);
+  return Response.json(responseBody);
 }
+
+/**
+ * microCMS APIから返却されたコンテンツデータの型ガードを行う
+ * @param content コンテンツデータ
+ * @returns microCMS APIから返却されたコンテンツデータかどうか
+ */
+const isMicroCMSContent = (content: unknown): content is MicroCMSContent => {
+  if (!content) return false;
+  return (
+    content.hasOwnProperty("id") &&
+    content.hasOwnProperty("createdAt") &&
+    content.hasOwnProperty("updatedAt") &&
+    content.hasOwnProperty("publishedAt") &&
+    content.hasOwnProperty("revisedAt") &&
+    content.hasOwnProperty("title") &&
+    content.hasOwnProperty("content") &&
+    content.hasOwnProperty("eyecatch") &&
+    content.hasOwnProperty("category")
+  );
+};
