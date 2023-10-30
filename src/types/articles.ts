@@ -4,7 +4,7 @@ export type Article = {
   content: string;
   category: string;
   createdAt: string;
-  eyeCatch: string;
+  eyeCatch: `https${string}`;
 };
 
 export type Articles = Article[];
