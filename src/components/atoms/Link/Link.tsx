@@ -10,7 +10,7 @@ type LinkProps = {
 
 export const MyLink = ({ tabIndex = 0, children, ...props }: LinkProps) => {
   return (
-    <Link className={styles.link} {...props}>
+    <Link className={styles.link} prefetch={false} {...props}>
       {children}
     </Link>
   );
