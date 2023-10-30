@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./appImage.module.css";
+import styles from "./AppImage.module.css";
 
 type ImageProps = {
   radius?: boolean;

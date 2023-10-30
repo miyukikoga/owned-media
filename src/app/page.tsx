@@ -2,7 +2,7 @@ import { headers } from "next/headers";
 import { ArticleCards } from "../components/organisms/ArticleCards";
 import { Header } from "../components/organisms/Header";
 import { Articles } from "../types/articles";
-import { mediaName } from "../constants/blog";
+import { mediaName } from "../constants/media";
 import style from "./page.module.css";
 
 async function fetchArticles(host: string): Promise<Articles> {

@@ -1,7 +1,7 @@
 import { type ReactNode } from "react";
 import { Logo } from "../../atoms/Logo";
 import { HeaderMenu } from "../../molecules/HeaderMenu";
-import styles from "./header.module.css";
+import styles from "./Header.module.css";
 
 type HeaderProps = {
   children: ReactNode;

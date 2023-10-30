@@ -1,6 +1,6 @@
 import { type ReactNode } from "react";
 import Link from "next/link";
-import styles from "./appLink.module.css";
+import styles from "./AppLink.module.css";
 
 type LinkProps = {
   tabIndex?: number;
