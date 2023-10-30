@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { type ReactNode } from "react";
 import styles from "./time.module.css";
 
 type TimeProps = {

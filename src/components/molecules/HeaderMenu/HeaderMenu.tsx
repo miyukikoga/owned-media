@@ -1,4 +1,3 @@
-import React from "react";
 import { BsPersonCircle } from "react-icons/bs";
 import { AppLink } from "../../atoms/AppLink";
 import styles from "./headerMenu.module.css";

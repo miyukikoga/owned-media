@@ -1,4 +1,3 @@
-import React from "react";
 import { ArticleCard } from "../../molecules/ArticleCard";
 import { Articles } from "../../../types/articles";
 import styles from "./articleCards.module.css";

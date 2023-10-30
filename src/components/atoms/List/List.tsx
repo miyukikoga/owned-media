@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { type ReactNode } from "react";
 import styles from "./list.module.css";
 
 type ListProps = {

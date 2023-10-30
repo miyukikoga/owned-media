@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { type ReactNode } from "react";
 import { Logo } from "../../atoms/Logo";
 import { HeaderMenu } from "../../molecules/HeaderMenu";
 import styles from "./header.module.css";
