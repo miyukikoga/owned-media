@@ -44,7 +44,7 @@ export const ArticleCard = ({ article }: ArticleCardProps) => {
                 <Text size="small">{article.category}</Text>
               </div>
               <span className={styles.time}>
-                <Time size="small" dateTime={new Date(article.createdAt)}>
+                <Time size="small" dateTime={article.createdAt}>
                   {formattedDate}
                 </Time>
               </span>

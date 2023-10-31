@@ -1,17 +1,17 @@
+import type { ComponentPropsWithoutRef } from "react";
 import Image from "next/image";
 import styles from "./appImage.module.css";
 
-type ImageProps = {
+type ImageProps = ComponentPropsWithoutRef<typeof Image> & {
+  alt: string;
   radius?: boolean;
   size?: "small" | "medium" | "large";
-  alt?: string;
-  src: string;
 };
 
 export const AppImage = ({
   radius = false,
   size = "medium",
-  alt = "",
+  alt,
   src,
 }: ImageProps) => {
   const mode = radius ? styles.radius : "";

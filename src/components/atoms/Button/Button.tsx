@@ -1,9 +1,9 @@
+import type { ComponentPropsWithoutRef } from "react";
 import styles from "./button.module.css";
 
-type ButtonProps = {
+type ButtonProps = ComponentPropsWithoutRef<"button"> & {
   size?: "small" | "medium" | "large";
   label: string;
-  onClick?: () => void;
 };
 
 export const Button = ({ size = "medium", label, ...props }: ButtonProps) => {

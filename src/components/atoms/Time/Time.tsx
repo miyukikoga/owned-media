@@ -1,18 +1,15 @@
+import type { ComponentPropsWithoutRef } from "react";
 import { type ReactNode } from "react";
 import styles from "./time.module.css";
 
-type TimeProps = {
+type TimeProps = ComponentPropsWithoutRef<"time"> & {
   size?: "small" | "medium" | "large";
-  dateTime: Date;
   children: ReactNode;
 };
 
-export const Time = ({ size = "medium", dateTime, children }: TimeProps) => {
+export const Time = ({ size = "medium", children, ...props }: TimeProps) => {
   return (
-    <time
-      className={[styles.time, styles[size]].join(" ")}
-      dateTime={dateTime.toISOString()}
-    >
+    <time className={[styles.time, styles[size]].join(" ")} {...props}>
       {children}
     </time>
   );
