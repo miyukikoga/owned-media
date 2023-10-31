@@ -5,6 +5,12 @@ import { Articles } from "../types/articles";
 import { mediaName } from "../constants/media";
 import style from "./page.module.css";
 
+class ExtractHostNameError extends Error {
+  static {
+    this.prototype.name = "ExtractHostNameError";
+  }
+}
+
 async function fetchArticles(host: string): Promise<Articles> {
   const protocol = process?.env.NODE_ENV === "development" ? "http" : "https";
   const response = await fetch(`${protocol}://${host}/api/articles`);
@@ -13,7 +19,7 @@ async function fetchArticles(host: string): Promise<Articles> {
 
 export default async function Page() {
   const host = headers().get("host");
-  if (!host) throw new Error("Failed to get host");
+  if (!host) throw new ExtractHostNameError("Failed to get host");
 
   const articles = await fetchArticles(host);
 

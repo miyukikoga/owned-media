@@ -1,9 +1,27 @@
 import { createClient } from "microcms-js-sdk";
 import { MicroCMSContent } from "../../../types/microCms";
 
+class EnvironmentVariablesError extends Error {
+  static {
+    this.prototype.name = "EnvironmentVariablesError";
+  }
+}
+
+class FetchBlogsError extends Error {
+  static {
+    this.prototype.name = "FetchBlogsError";
+  }
+}
+
+class FetchedBlogsTypeError extends Error {
+  static {
+    this.prototype.name = "FetchedBlogsTypeError";
+  }
+}
+
 export async function GET() {
   if (!process.env.MICRO_CMS_DOMAIN || !process.env.MICRO_CMS_API_KEY)
-    throw new Error("No environment variables");
+    throw new EnvironmentVariablesError("No environment variables");
 
   const client = createClient({
     serviceDomain: process.env.MICRO_CMS_DOMAIN,
@@ -15,12 +33,14 @@ export async function GET() {
   });
 
   if (!res) {
-    throw new Error("Failed to fetch data");
+    throw new FetchBlogsError("Failed to fetch data");
   }
 
   const responseBody = res.contents.map((element: unknown) => {
     if (!isMicroCMSContent(element))
-      throw Error("GET blogs APIのレスポンスの型が間違っています");
+      throw new FetchedBlogsTypeError(
+        "GET blogs APIのレスポンスの型が間違っています"
+      );
 
     // HTMLのタグを削除する
     const regex = /(<([^>]+)>)/gi;
