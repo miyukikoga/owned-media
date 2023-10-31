@@ -6,7 +6,7 @@ type Props = {
   articles: Articles;
 };
 
-export const ArticleCards = ({ articles }: Props) => {
+export const ArticleCards = ({ articles }: Props): JSX.Element => {
   return (
     <div className={styles.articleCards}>
       {articles.map((article) => {

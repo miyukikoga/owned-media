@@ -14,7 +14,7 @@ type Props = {
   article: Article;
 };
 
-export const ArticleCard = ({ article }: Props) => {
+export const ArticleCard = ({ article }: Props): JSX.Element => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);

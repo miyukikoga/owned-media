@@ -7,7 +7,11 @@ type Props = ComponentPropsWithoutRef<"time"> & {
   children: ReactNode;
 };
 
-export const Time = ({ size = "medium", children, ...props }: Props) => {
+export const Time = ({
+  size = "medium",
+  children,
+  ...props
+}: Props): JSX.Element => {
   return (
     <time className={[styles.time, styles[size]].join(" ")} {...props}>
       {children}

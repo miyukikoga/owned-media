@@ -7,7 +7,7 @@ type Props = {
   children: ReactNode;
 };
 
-export const Header = ({ children }: Props) => {
+export const Header = ({ children }: Props): JSX.Element => {
   return (
     <div className={styles.header}>
       <div>

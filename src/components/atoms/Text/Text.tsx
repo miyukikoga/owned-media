@@ -6,7 +6,7 @@ type Props = {
   children: ReactNode;
 };
 
-export const Text = ({ size = "medium", children }: Props) => {
+export const Text = ({ size = "medium", children }: Props): JSX.Element => {
   return (
     <span className={[styles.text, styles[size]].join(" ")}>{children}</span>
   );

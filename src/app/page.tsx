@@ -17,7 +17,7 @@ async function fetchArticles(host: string): Promise<Articles> {
   return await response.json();
 }
 
-export default async function Page() {
+export default async function Page(): Promise<JSX.Element> {
   const host = headers().get("host");
   if (!host) throw new ExtractHostNameError("Failed to get host");
 

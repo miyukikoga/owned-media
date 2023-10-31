@@ -4,7 +4,7 @@ import styles from "./headerMenu.module.css";
 
 type Props = {};
 
-export const HeaderMenu = ({}: Props) => {
+export const HeaderMenu = ({}: Props): JSX.Element => {
   return (
     <div className={styles.menu}>
       <AppLink href="/profile">

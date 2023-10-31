@@ -13,7 +13,7 @@ export const AppImage = ({
   size = "medium",
   alt,
   src,
-}: Props) => {
+}: Props): JSX.Element => {
   const mode = radius ? styles.radius : "";
   return (
     <div className={[styles.image, styles[size], mode].join(" ")}>

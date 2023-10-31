@@ -6,7 +6,11 @@ type Props = ComponentPropsWithoutRef<"button"> & {
   label: string;
 };
 
-export const Button = ({ size = "medium", label, ...props }: Props) => {
+export const Button = ({
+  size = "medium",
+  label,
+  ...props
+}: Props): JSX.Element => {
   return (
     <button
       type="button"

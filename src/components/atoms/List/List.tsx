@@ -11,7 +11,7 @@ export const List = ({
   horizontal = false,
   size = "medium",
   childrenList,
-}: Props) => {
+}: Props): JSX.Element => {
   const sort = horizontal ? styles.horizontal : "";
   return (
     <ul className={[styles.ul, styles[size]].join(" ")}>
