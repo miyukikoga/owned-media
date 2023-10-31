@@ -1,5 +1,5 @@
 import { type ReactNode } from "react";
-import styles from "./Time.module.css";
+import styles from "./time.module.css";
 
 type TimeProps = {
   size?: "small" | "medium" | "large";

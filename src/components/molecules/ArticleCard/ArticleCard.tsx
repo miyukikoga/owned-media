@@ -8,7 +8,7 @@ import { AppImage } from "../../atoms/AppImage";
 import { Text } from "../../atoms/Text";
 import { Time } from "../../atoms/Time";
 import { Article } from "../../../types/articles";
-import styles from "./ArticleCard.module.css";
+import styles from "./articleCard.module.css";
 
 type ArticleCardProps = {
   article: Article;

@@ -1,6 +1,6 @@
 import { ArticleCard } from "../../molecules/ArticleCard";
 import { Articles } from "../../../types/articles";
-import styles from "./ArticleCards.module.css";
+import styles from "./articleCards.module.css";
 
 type ArticleCardsProps = {
   articles: Articles;

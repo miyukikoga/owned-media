@@ -1,5 +1,5 @@
 import { type ReactNode } from "react";
-import styles from "./Logo.module.css";
+import styles from "./logo.module.css";
 
 type LogoProps = {
   size?: "small" | "medium" | "large";
