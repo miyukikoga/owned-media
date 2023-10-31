@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import styles from "./list.module.css";
 
-type ListProps = {
+type Props = {
   horizontal?: boolean;
   size?: "small" | "medium" | "large";
   childrenList: ReactNode[];
@@ -11,8 +11,7 @@ export const List = ({
   horizontal = false,
   size = "medium",
   childrenList,
-  ...props
-}: ListProps) => {
+}: Props) => {
   const sort = horizontal ? styles.horizontal : "";
   return (
     <ul className={[styles.ul, styles[size]].join(" ")}>

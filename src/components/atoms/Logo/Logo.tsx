@@ -1,11 +1,11 @@
 import { type ReactNode } from "react";
 import styles from "./logo.module.css";
 
-type LogoProps = {
+type Props = {
   size?: "small" | "medium" | "large";
   children: ReactNode;
 };
 
-export const Logo = ({ size = "medium", children }: LogoProps) => {
+export const Logo = ({ size = "medium", children }: Props) => {
   return <p className={[styles.title, styles[size]].join(" ")}>{children}</p>;
 };

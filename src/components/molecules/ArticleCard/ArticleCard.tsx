@@ -10,11 +10,11 @@ import { Time } from "../../atoms/Time";
 import { Article } from "../../../types/articles";
 import styles from "./articleCard.module.css";
 
-type ArticleCardProps = {
+type Props = {
   article: Article;
 };
 
-export const ArticleCard = ({ article }: ArticleCardProps) => {
+export const ArticleCard = ({ article }: Props) => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);

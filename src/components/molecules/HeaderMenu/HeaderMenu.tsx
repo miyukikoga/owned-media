@@ -2,9 +2,9 @@ import { BsPersonCircle } from "react-icons/bs";
 import { AppLink } from "../../atoms/AppLink";
 import styles from "./headerMenu.module.css";
 
-type HeaderMenuProps = {};
+type Props = {};
 
-export const HeaderMenu = ({}: HeaderMenuProps) => {
+export const HeaderMenu = ({}: Props) => {
   return (
     <div className={styles.menu}>
       <AppLink href="/profile">

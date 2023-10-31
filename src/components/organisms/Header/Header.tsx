@@ -3,11 +3,11 @@ import { Logo } from "../../atoms/Logo";
 import { HeaderMenu } from "../../molecules/HeaderMenu";
 import styles from "./header.module.css";
 
-type HeaderProps = {
+type Props = {
   children: ReactNode;
 };
 
-export const Header = ({ children }: HeaderProps) => {
+export const Header = ({ children }: Props) => {
   return (
     <div className={styles.header}>
       <div>

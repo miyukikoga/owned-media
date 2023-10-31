@@ -3,11 +3,11 @@ import { type ReactNode } from "react";
 import Link from "next/link";
 import styles from "./appLink.module.css";
 
-type AppLinkProps = ComponentPropsWithoutRef<typeof Link> & {
+type Props = ComponentPropsWithoutRef<typeof Link> & {
   children?: ReactNode;
 };
 
-export const AppLink = ({ children, ...props }: AppLinkProps) => {
+export const AppLink = ({ children, ...props }: Props) => {
   return (
     <Link className={styles.link} prefetch={false} {...props}>
       {children}

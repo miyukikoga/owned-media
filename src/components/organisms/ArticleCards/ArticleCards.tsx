@@ -2,11 +2,11 @@ import { ArticleCard } from "../../molecules/ArticleCard";
 import { Articles } from "../../../types/articles";
 import styles from "./articleCards.module.css";
 
-type ArticleCardsProps = {
+type Props = {
   articles: Articles;
 };
 
-export const ArticleCards = ({ articles }: ArticleCardsProps) => {
+export const ArticleCards = ({ articles }: Props) => {
   return (
     <div className={styles.articleCards}>
       {articles.map((article) => {
