@@ -4,7 +4,7 @@ import { AppImage } from "./AppImage";
 import imageFile from "../../../../public/profile.png";
 
 const meta = {
-  title: "My/Image",
+  title: "App/Image",
   component: AppImage,
   parameters: {
     layout: "centered",

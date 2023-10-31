@@ -1,40 +1,39 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { List } from "./List";
+import { Button } from "./Button";
 
 const meta = {
-  title: "App/List",
-  component: List,
+  title: "App/Button",
+  component: Button,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
   argTypes: {
-    horizontal: { control: "boolean" },
-    childrenList: { control: "object" },
+    size: { control: "text" },
+    label: { control: "text" },
   },
-} satisfies Meta<typeof List>;
+} satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Horizontal: Story = {
+export const Default: Story = {
   args: {
-    horizontal: true,
-    childrenList: ["a", "b", "c"],
+    label: "Button",
   },
 };
 
 export const Large: Story = {
   args: {
     size: "large",
-    childrenList: ["a", "b", "c"],
+    label: "Button",
   },
 };
 
 export const Small: Story = {
   args: {
     size: "small",
-    childrenList: ["a", "b", "c"],
+    label: "Button",
   },
 };

@@ -1,25 +1,22 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { AppLink } from "./AppLink";
+import { Header } from "./Header";
 
 const meta = {
-  title: "App/AppLink",
-  component: AppLink,
+  title: "App/Header",
+  component: Header,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-  argTypes: {
-    href: { control: "text" },
-  },
-} satisfies Meta<typeof AppLink>;
+  argTypes: { children: { control: "text" } },
+} satisfies Meta<typeof Header>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    children: "Anchor",
-    href: "http://localhost:6006/",
+    children: "Title",
   },
 };
