@@ -16,7 +16,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Medium: Story = {
   args: {
-    dateTime: new Date("2023-10-10"),
+    dateTime: "2023-10-10T21:53:43.952Z",
     children: "2023年10月10日",
   },
 };
@@ -24,7 +24,7 @@ export const Medium: Story = {
 export const Large: Story = {
   args: {
     size: "large",
-    dateTime: new Date("2023-10-10"),
+    dateTime: "2023-10-10T21:53:43.952Z",
     children: "2023年10月10日",
   },
 };
@@ -32,7 +32,7 @@ export const Large: Story = {
 export const Small: Story = {
   args: {
     size: "small",
-    dateTime: new Date("2023-10-10"),
+    dateTime: "2023-10-10T21:53:43.952Z",
     children: "2023年10月10日",
   },
 };
