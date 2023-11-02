@@ -51,9 +51,13 @@ export const ArticleCard = ({ article }: Props): JSX.Element => {
             </div>
             <span className={styles.good} onClick={handleClick}>
               {click ? (
-                <BsHandThumbsUpFill color="#1ea7fd" size="1.5em" />
+                <BsHandThumbsUpFill
+                  color="#1ea7fd"
+                  size="1.5em"
+                  title="BsHandThumbsUpFill"
+                />
               ) : (
-                <BsHandThumbsUp size="1.5em" />
+                <BsHandThumbsUp size="1.5em" title="BsHandThumbsUp" />
               )}
             </span>
           </div>
@@ -68,6 +72,6 @@ export const ArticleCard = ({ article }: Props): JSX.Element => {
  * @param date 日付
  * @returns フォーマットされた日付
  */
-const formatArticleCreatedAt = (date: Date): string => {
+export const formatArticleCreatedAt = (date: Date): string => {
   return format(date, "yyyy-MM-dd");
 };
