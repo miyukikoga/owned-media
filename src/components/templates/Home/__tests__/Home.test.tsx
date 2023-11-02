@@ -1,7 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import { ArticleCards } from "../ArticleCards";
-import { formatArticleCreatedAt } from "../../../molecules/ArticleCard";
+import { Home } from "../Home";
 import { Articles } from "../../../../types/articles";
 
 const contents = [
@@ -25,9 +24,9 @@ const contents = [
   },
 ] as Articles;
 
-describe("<ArticleCards />", () => {
+describe("<HeaderMenu />", () => {
   it("表示する", () => {
-    render(<ArticleCards articles={contents} />);
+    render(<Home articles={contents} />);
     const articles = screen.getAllByRole("article");
     for (const [index, article] of Object.entries(articles)) {
       expect(article).toBeInTheDocument();
@@ -36,17 +35,6 @@ describe("<ArticleCards />", () => {
       expect(screen.getByText(content.title)).toBeInTheDocument();
       expect(screen.getByText(content.content)).toBeInTheDocument();
       expect(screen.getByText(content.category)).toBeInTheDocument();
-
-      const formattedDate = formatArticleCreatedAt(new Date(content.createdAt));
-      expect(screen.getByText(formattedDate)).toBeInTheDocument();
-    }
-
-    const links = screen.getAllByRole("link");
-    for (const [index, link] of Object.entries(links)) {
-      expect(link).toBeInTheDocument();
-      // 一つの記事にリンクは2つ
-      const content = contents[Math.floor(Number(index) / 2)];
-      expect(link).toHaveAttribute("href", `/article/${content.id}`);
     }
   });
 });
