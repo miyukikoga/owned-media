@@ -1,7 +1,7 @@
 import { headers } from "next/headers";
 import { ArticleCards } from "../components/organisms/ArticleCards";
 import { Header } from "../components/organisms/Header";
-import { Articles } from "../types/articles";
+import { fetchArticles } from "../features/articles";
 import { mediaName } from "../constants/media";
 import style from "./page.module.css";
 
@@ -9,12 +9,6 @@ class ExtractHostNameError extends Error {
   static {
     this.prototype.name = "ExtractHostNameError";
   }
-}
-
-export async function fetchArticles(host: string): Promise<Articles> {
-  const protocol = process?.env.NODE_ENV === "development" ? "http" : "https";
-  const response = await fetch(`${protocol}://${host}/api/articles`);
-  return await response.json();
 }
 
 export default async function Page(): Promise<JSX.Element> {

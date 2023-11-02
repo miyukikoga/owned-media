@@ -1,7 +1,7 @@
 /**
  * @jest-environment node
  */
-import { fetchArticles } from "../page";
+import { fetchArticles } from "../articles";
 import { server } from "../../mocks/node";
 import { articlesResponse } from "../../mocks/api/articles/response";
 
