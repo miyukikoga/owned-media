@@ -4,7 +4,7 @@ import { Logo } from "../Logo";
 
 describe("<Text />", () => {
   it("表示する", () => {
-    render(<Logo>テスト</Logo>);
-    expect(screen.getByText("テスト")).toBeInTheDocument();
+    render(<Logo>すみっコ</Logo>);
+    expect(screen.getByText("すみっコ")).toBeInTheDocument();
   });
 });
