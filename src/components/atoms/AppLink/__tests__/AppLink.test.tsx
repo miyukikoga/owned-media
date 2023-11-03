@@ -5,7 +5,7 @@ import { AppLink } from "../AppLink";
 describe("<MyLink />", () => {
   it("表示する", () => {
     render(<AppLink href="/">テスト</AppLink>);
-    const a = screen.getByRole("link", { name: "テスト" });
-    expect(a).toBeInTheDocument();
+    const link = screen.getByRole("link", { name: "テスト" });
+    expect(link).toBeInTheDocument();
   });
 });
