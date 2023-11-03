@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { AppImage } from "../AppImage";
-import fileMock from "../../../../../__mocks__/fileMock";
+import fileMock from "../../../../__mocks__/fileMock";
 
 describe("<AppImage />", () => {
   it("表示する", () => {
