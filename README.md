@@ -1,4 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 事前準備
+
+.env.local を作成します。
+
+```
+MICRO_CMS_DOMAIN=
+MICRO_CMS_API_KEY=
+```
+
+vercel と連携後、以下コマンドでも作成できます。
+
+```bash
+vercel env pull '.env.local'
+```
 
 ## Getting Started
 
