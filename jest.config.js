@@ -9,9 +9,16 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   testEnvironment: "jest-environment-jsdom",
   moduleNameMapper: {
+    "\\.(css)$": "<rootDir>/node_modules/jest-css-modules",
     "^@/*/(.*)$": "<rootDir>/src/$1",
   },
   setupFilesAfterEnv: ["./jest.setup.ts"],
+  testPathIgnorePatterns: [
+    "<rootDir>/.next/",
+    "<rootDir>/node_modules/",
+    "<rootDir>/.storybook/",
+    "<rootDir>/.vercel/",
+  ],
 };
 
 module.exports = createJestConfig(customJestConfig);

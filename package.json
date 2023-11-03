@@ -50,20 +50,6 @@
     "typescript": "^5",
     "whatwg-fetch": "^3.6.19"
   },
-  "jest": {
-    "projects": [
-      "./jest.config.js"
-    ],
-    "testPathIgnorePatterns": [
-      "<rootDir>/.next/",
-      "<rootDir>/node_modules/",
-      "<rootDir>/.storybook/",
-      "<rootDir>/.vercel/"
-    ],
-    "moduleNameMapper": {
-      "\\.(css)$": "<rootDir>/node_modules/jest-css-modules"
-    }
-  },
   "msw": {
     "workerDirectory": "public"
   }
