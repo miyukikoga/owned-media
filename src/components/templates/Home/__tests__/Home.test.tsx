@@ -24,8 +24,8 @@ const contents = [
   },
 ] as Articles;
 
-describe("<HeaderMenu />", () => {
-  it("表示する", () => {
+describe("<Home />", () => {
+  it("対象のHomeを取得できる", () => {
     render(<Home articles={contents} />);
     const articles = screen.getAllByRole("article");
     for (const [index, article] of Object.entries(articles)) {

@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import { List } from "../List";
 
 describe("<List />", () => {
-  it("表示する", () => {
+  it("リストアイテムから対象のListを取得できる", () => {
     render(<List childrenList={["a", "b", "c"]} />);
 
     const items = screen.getAllByRole("listitem");

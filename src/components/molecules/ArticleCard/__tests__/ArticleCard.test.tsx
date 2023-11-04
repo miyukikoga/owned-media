@@ -15,7 +15,7 @@ const content = {
 } as Article;
 
 describe("<ArticleCard />", () => {
-  it("表示する", () => {
+  it("テキストから対象のTimeを取得できる", () => {
     render(<ArticleCard article={content} />);
     const article = screen.getByRole("article");
     expect(article).toBeInTheDocument();
@@ -33,7 +33,7 @@ describe("<ArticleCard />", () => {
     expect(screen.getByText(formattedDate)).toBeInTheDocument();
   });
 
-  it("いいねをクリックする", async () => {
+  it("いいねをクリックできる", async () => {
     render(<ArticleCard article={content} />);
     await userEvent.click(screen.getByText("BsHandThumbsUp"));
     expect(screen.getByText("BsHandThumbsUpFill")).toBeInTheDocument();
@@ -41,7 +41,7 @@ describe("<ArticleCard />", () => {
 });
 
 describe("formatArticleCreatedAt()", () => {
-  it("", () => {
+  it("日付をフォーマットできる", () => {
     const date = new Date("2023-04-05T09:23:31.664Z");
     expect(formatArticleCreatedAt(date)).toBe("2023-04-05");
   });

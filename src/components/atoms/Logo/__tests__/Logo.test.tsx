@@ -2,9 +2,9 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { Logo } from "../Logo";
 
-describe("<Text />", () => {
-  it("表示する", () => {
-    render(<Logo>テスト</Logo>);
-    expect(screen.getByText("テスト")).toBeInTheDocument();
+describe("<Logo />", () => {
+  it("テキストから対象のLogoを取得できる", () => {
+    render(<Logo>メディアタイトル</Logo>);
+    expect(screen.getByText("メディアタイトル")).toBeInTheDocument();
   });
 });

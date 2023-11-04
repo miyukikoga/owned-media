@@ -26,7 +26,7 @@ const contents = [
 ] as Articles;
 
 describe("<ArticleCards />", () => {
-  it("表示する", () => {
+  it("対象のArticleCardsを取得できる", () => {
     render(<ArticleCards articles={contents} />);
     const articles = screen.getAllByRole("article");
     for (const [index, article] of Object.entries(articles)) {

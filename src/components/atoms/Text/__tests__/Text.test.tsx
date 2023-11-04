@@ -3,7 +3,7 @@ import "@testing-library/jest-dom";
 import { Text } from "../Text";
 
 describe("<Text />", () => {
-  it("表示する", () => {
+  it("テキストから対象のTextを取得できる", () => {
     render(<Text>テスト</Text>);
     expect(screen.getByText("テスト")).toBeInTheDocument();
   });

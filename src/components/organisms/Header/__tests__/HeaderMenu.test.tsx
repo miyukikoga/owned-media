@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { Header } from "../Header";
 
 describe("<HeaderMenu />", () => {
-  it("表示する", () => {
+  it("対象のHeaderMenuを取得できる", () => {
     render(<Header>テスト</Header>);
     expect(screen.getByText("テスト")).toBeInTheDocument();
 

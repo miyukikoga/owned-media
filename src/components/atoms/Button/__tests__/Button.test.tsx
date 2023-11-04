@@ -4,13 +4,13 @@ import "@testing-library/jest-dom";
 import { Button } from "../Button";
 
 describe("<Button />", () => {
-  it("表示する", () => {
+  it("ボタンのラベルテキストから対象のAppLinkを取得できる", () => {
     render(<Button label="テスト" />);
     const button = screen.getByRole("button", { name: "テスト" });
     expect(button).toBeInTheDocument();
   });
 
-  it("クリックする", async () => {
+  it("ボタンをクリックできる", async () => {
     const onClickMock = jest.fn();
     render(<Button label="テスト" onClick={onClickMock} />);
     const button = screen.getByRole("button");
