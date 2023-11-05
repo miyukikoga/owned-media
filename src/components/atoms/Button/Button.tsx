@@ -1,7 +1,9 @@
 import type { ComponentPropsWithoutRef } from "react";
+import { Size } from "../../../types/styles";
+import { getTextSizeClassName } from "../../../features/styles";
 
 type Props = ComponentPropsWithoutRef<"button"> & {
-  size?: "small" | "medium" | "large";
+  size?: Size;
   label: string;
 };
 
@@ -10,20 +12,14 @@ export const Button = ({
   label,
   ...props
 }: Props): JSX.Element => {
-  const buttonSize = getSizeClassName(size);
+  const textSize = getTextSizeClassName(size);
   return (
     <button
       type="button"
-      className={`font-body font-bold cursor-pointer rounded bg-cyan-500 hover:bg-cyan-600 text-white border-0 ${buttonSize}`}
+      className={`font-body font-bold cursor-pointer rounded bg-cyan-500 hover:bg-cyan-600 text-white border-0 py-1 px-4 ${textSize}`}
       {...props}
     >
       {label}
     </button>
   );
-};
-
-const getSizeClassName = (size: string): string => {
-  if (size === "small") return "text-xs py-1 px-2";
-  if (size === "large") return "text-2xl py-1 px-4";
-  return "text-base py-1 px-3";
 };

@@ -1,8 +1,10 @@
 import type { ComponentPropsWithoutRef } from "react";
 import { type ReactNode } from "react";
+import { Size } from "../../../types/styles";
+import { getTextSizeClassName } from "../../../features/styles";
 
 type Props = ComponentPropsWithoutRef<"time"> & {
-  size?: "small" | "medium" | "large";
+  size?: Size;
   children: ReactNode;
 };
 
@@ -11,16 +13,10 @@ export const Time = ({
   children,
   ...props
 }: Props): JSX.Element => {
-  const textSize = getSizeClassName(size);
+  const textSize = getTextSizeClassName(size);
   return (
     <time className={`font-body ${textSize}`} {...props}>
       {children}
     </time>
   );
-};
-
-const getSizeClassName = (size: string): string => {
-  if (size === "small") return "text-xs";
-  if (size === "large") return "text-2xl";
-  return "text-base";
 };

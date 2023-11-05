@@ -1,23 +1,19 @@
 import { type ReactNode } from "react";
+import { Size } from "../../../types/styles";
+import { getTextSizeClassName } from "../../../features/styles";
 
 type Props = {
-  size?: "small" | "medium" | "large";
+  size?: Size;
   children: ReactNode;
 };
 
 export const Logo = ({ size = "medium", children }: Props): JSX.Element => {
-  const logoSize = getSizeClassName(size);
+  const textSize = getTextSizeClassName(size);
   return (
     <p
-      className={`font-body cursor-pointer bg-cyan-500 hover:bg-cyan-600 font-bold text-white rounded inline-block p-3 ${logoSize}`}
+      className={`font-body cursor-pointer bg-cyan-500 hover:bg-cyan-600 font-bold text-white rounded inline-block p-3 ${textSize}`}
     >
       {children}
     </p>
   );
-};
-
-const getSizeClassName = (size: string): string => {
-  if (size === "small") return "text-xs";
-  if (size === "large") return "text-2xl";
-  return "text-base";
 };
