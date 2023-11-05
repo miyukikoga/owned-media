@@ -1,6 +1,5 @@
 import type { ComponentPropsWithoutRef } from "react";
 import { type ReactNode } from "react";
-import styles from "./time.module.css";
 
 type Props = ComponentPropsWithoutRef<"time"> & {
   size?: "small" | "medium" | "large";
@@ -12,9 +11,16 @@ export const Time = ({
   children,
   ...props
 }: Props): JSX.Element => {
+  const textSize = getSizeClassName(size);
   return (
-    <time className={[styles.time, styles[size]].join(" ")} {...props}>
+    <time className={`font-body ${textSize}`} {...props}>
       {children}
     </time>
   );
+};
+
+const getSizeClassName = (size: string): string => {
+  if (size === "small") return "text-xs";
+  if (size === "large") return "text-2xl";
+  return "text-base";
 };

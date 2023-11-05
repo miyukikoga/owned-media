@@ -1,5 +1,4 @@
 import { type ReactNode } from "react";
-import styles from "./text.module.css";
 
 type Props = {
   size?: "small" | "medium" | "large";
@@ -7,7 +6,12 @@ type Props = {
 };
 
 export const Text = ({ size = "medium", children }: Props): JSX.Element => {
-  return (
-    <span className={[styles.text, styles[size]].join(" ")}>{children}</span>
-  );
+  const textSize = getSizeClassName(size);
+  return <span className={`font-body ${textSize}`}>{children}</span>;
+};
+
+const getSizeClassName = (size: string): string => {
+  if (size === "small") return "text-xs";
+  if (size === "large") return "text-2xl";
+  return "text-base";
 };

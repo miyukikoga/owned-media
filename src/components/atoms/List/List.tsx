@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import styles from "./list.module.css";
 
 type Props = {
   horizontal?: boolean;
@@ -12,16 +11,23 @@ export const List = ({
   size = "medium",
   childrenList,
 }: Props): JSX.Element => {
-  const sort = horizontal ? styles.horizontal : "";
+  const fontSize = getSizeClassName(size);
+  const sort = horizontal ? "inline-block mx-2" : "";
   return (
-    <ul className={[styles.ul, styles[size]].join(" ")}>
+    <ul>
       {childrenList.map((children, i) => {
         return (
-          <li className={[styles.li, styles[size], sort].join(" ")} key={i}>
+          <li className={`${fontSize} ${sort} list-none`} key={i}>
             <span>{children}</span>
           </li>
         );
       })}
     </ul>
   );
+};
+
+const getSizeClassName = (size: string): string => {
+  if (size === "small") return "text-xs";
+  if (size === "large") return "text-2xl";
+  return "text-base";
 };
