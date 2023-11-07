@@ -29,6 +29,9 @@ export async function GET() {
   });
 
   const res = await client.get({
+    customRequestInit: {
+      cache: "no-store",
+    },
     endpoint: "blogs",
   });
 
