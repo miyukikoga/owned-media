@@ -1,11 +1,6 @@
 import { headers } from "next/headers";
 import { ArticleCards } from "../components/organisms/ArticleCards";
 import { Header } from "../components/organisms/Header";
-import {
-  GoogleTagManager,
-  GoogleTagManagerId,
-} from "../components/atoms/GoogleTagManager";
-import { googleTagManagerId } from "../features/gtm";
 import { Articles } from "../types/articles";
 import { mediaName } from "../constants/media";
 import style from "./page.module.css";
@@ -30,9 +25,6 @@ export default async function Page(): Promise<JSX.Element> {
 
   return (
     <div className={style.page}>
-      <GoogleTagManager
-        googleTagManagerId={googleTagManagerId as GoogleTagManagerId}
-      />
       <Header>{mediaName}</Header>
       <ArticleCards articles={articles} />
     </div>
