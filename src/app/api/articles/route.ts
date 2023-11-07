@@ -54,7 +54,7 @@ export async function GET() {
       title: element.title,
       content: content,
       category: element.category.name,
-      createdAt: element.createdAt,
+      createdAt: element.publishedAt,
       eyeCatch: element.eyecatch.url,
     };
   });
