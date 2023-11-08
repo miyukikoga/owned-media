@@ -1,8 +1,0 @@
-.header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.menu {
-  justify-self: end;
-  padding: 10px;
-}

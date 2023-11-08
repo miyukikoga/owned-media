@@ -11,6 +11,7 @@ const meta = {
   },
   tags: ["autodocs"],
   argTypes: {
+    sizePx: { control: "number" },
     radius: { control: "boolean" },
     alt: { control: "text" },
     src: { control: "text" },
@@ -31,7 +32,7 @@ export const Radius: Story = {
 export const Large: Story = {
   args: {
     radius: false,
-    size: "large",
+    sizePx: 800,
     alt: "AppImage",
     src: imageFile.src,
   },
@@ -39,7 +40,7 @@ export const Large: Story = {
 
 export const Medium: Story = {
   args: {
-    size: "medium",
+    sizePx: 400,
     alt: "AppImage",
     src: imageFile.src,
   },
@@ -47,7 +48,7 @@ export const Medium: Story = {
 
 export const Small: Story = {
   args: {
-    size: "small",
+    sizePx: 100,
     alt: "AppImage",
     src: imageFile.src,
   },

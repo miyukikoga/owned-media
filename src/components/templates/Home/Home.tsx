@@ -3,7 +3,6 @@ import { ArticleCards } from "../../organisms/ArticleCards";
 import { Header } from "../../organisms/Header";
 import { mediaName } from "../../../constants/media";
 import { Articles } from "../../../types/articles";
-import style from "./home.module.css";
 
 type Props = {
   articles: Articles;
@@ -11,7 +10,7 @@ type Props = {
 
 export const Home = ({ articles }: Props): JSX.Element => {
   return (
-    <div className={style.home}>
+    <div className="mx-10">
       <Header>{mediaName}</Header>
       <ArticleCards articles={articles} />
     </div>

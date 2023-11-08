@@ -1,12 +1,11 @@
 import { BsPersonCircle } from "react-icons/bs";
 import { AppLink } from "../../atoms/AppLink";
-import styles from "./headerMenu.module.css";
 
 type Props = {};
 
 export const HeaderMenu = ({}: Props): JSX.Element => {
   return (
-    <div className={styles.menu}>
+    <div>
       <AppLink href="/profile">
         <BsPersonCircle color="grey" size="2em" />
       </AppLink>

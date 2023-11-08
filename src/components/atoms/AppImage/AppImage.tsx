@@ -1,29 +1,28 @@
 import type { ComponentPropsWithoutRef } from "react";
 import Image from "next/image";
-import styles from "./appImage.module.css";
 
 type Props = ComponentPropsWithoutRef<typeof Image> & {
   alt: string;
   radius?: boolean;
-  size?: "small" | "medium" | "large";
+  sizePx?: number;
 };
 
 export const AppImage = ({
   radius = false,
-  size = "medium",
+  sizePx = 400,
   alt,
   src,
 }: Props): JSX.Element => {
-  const mode = radius ? styles.radius : "";
+  const mode = radius ? "rounded-full" : "";
   return (
-    <div className={[styles.image, styles[size], mode].join(" ")}>
+    <div className={`cursor-pointer`}>
       <Image
         priority
         alt={alt}
         src={src}
-        fill
-        style={{ objectFit: "cover" }}
-        sizes="100%"
+        width={sizePx}
+        height={sizePx}
+        className={mode}
       />
     </div>
   );
