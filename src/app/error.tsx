@@ -2,7 +2,6 @@
 
 import { useEffect } from "react";
 import { Button } from "../components/atoms/Button";
-import style from "./page.module.css";
 
 export default function Error({
   error,
@@ -16,7 +15,7 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className={style.error}>
+    <div className="text-center">
       <h2>Something went wrong!</h2>
       <Button onClick={() => reset()} label="Try again" />
     </div>
