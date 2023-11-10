@@ -46,7 +46,7 @@ describe("<ArticleCards />", () => {
       expect(link).toBeInTheDocument();
       // 一つの記事にリンクは2つ
       const content = contents[Math.floor(Number(index) / 2)];
-      expect(link).toHaveAttribute("href", `/article/${content.id}`);
+      expect(link).toHaveAttribute("href", `/articles/${content.id}`);
     }
   });
 });

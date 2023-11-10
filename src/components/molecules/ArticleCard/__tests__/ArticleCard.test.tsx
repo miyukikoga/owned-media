@@ -26,7 +26,7 @@ describe("<ArticleCard />", () => {
     const links = screen.getAllByRole("link");
     for (const link of links) {
       expect(link).toBeInTheDocument();
-      expect(link).toHaveAttribute("href", `/article/${content.id}`);
+      expect(link).toHaveAttribute("href", `/articles/${content.id}`);
     }
 
     const formattedDate = formatArticleCreatedAt(new Date(content.createdAt));
