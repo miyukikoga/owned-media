@@ -12,6 +12,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "@sentry/nextjs": "^7.77.0",
     "date-fns": "^2.30.0",
     "microcms-js-sdk": "^2.7.0",

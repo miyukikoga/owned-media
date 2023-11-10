@@ -24,3 +24,12 @@ export type MicroCMSContent = {
   eyecatch: MicroCMSContentEyeCatch;
   category: MicroCMSContentCategory;
 };
+
+export type MicroCMSCategory = {
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  revisedAt: string;
+  name: string;
+};
