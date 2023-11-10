@@ -17,6 +17,10 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    categories: [
+      { id: "q2r8qu6t-l", name: "グルメ" },
+      { id: "hpzd5iyz7h", name: "アニマル" },
+    ],
     children: "Title",
   },
 };
