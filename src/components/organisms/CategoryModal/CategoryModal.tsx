@@ -51,7 +51,7 @@ export const CategoryModal = ({ categories }: Props): JSX.Element => {
           <div className="fixed inset-0 overflow-y-auto">
             <div className="flex min-h-full items-start justify-start p-4 mt-20 text-center">
               <Transition.Child
-                className="absolute inset-0 z-40 flex pointer-events-none"
+                className="absolute inset-0 z-40 flex"
                 enter="transition ease duration-250 transform"
                 enterFrom="-translate-x-full"
                 enterTo="translate-x-0"
