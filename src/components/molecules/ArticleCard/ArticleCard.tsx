@@ -8,7 +8,6 @@ import { AppImage } from "../../atoms/AppImage";
 import { Text } from "../../atoms/Text";
 import { Time } from "../../atoms/Time";
 import { Article } from "../../../types/articles";
-import styles from "./articleCard.module.css";
 
 type Props = {
   article: Article;
@@ -23,37 +22,49 @@ export const ArticleCard = ({ article }: Props): JSX.Element => {
 
   return (
     <article>
-      <div className={styles.articleCard}>
+      <div className="grid grid-cols-3 border-t">
         <AppLink href={"/article/" + article.id}>
-          <div className={styles.image}>
+          <div className="col-span-1 flex justify-center items-center m-5">
             <AppImage alt="article" src={article.eyeCatch} />
           </div>
         </AppLink>
-        <div className={styles.content}>
-          <h2>
+        <div className="col-span-2 m-5">
+          <h1>
             <AppLink href={"/article/" + article.id}>
               <Text size="large">{article.title}</Text>
             </AppLink>
-          </h2>
-          <div className={styles.overflow}>
+          </h1>
+          <div className="truncate m-2">
             <Text>{article.content}</Text>
           </div>
-          <div className={styles.footer}>
-            <div>
-              <div className={styles.category}>
+          <div className="grid grid-cols-3">
+            <div className="col-span-2 m-2">
+              <div className="mt-2">
                 <Text size="small">{article.category}</Text>
               </div>
-              <span className={styles.time}>
+              <span className="mt-2">
                 <Time size="small" dateTime={article.createdAt}>
                   {formattedDate}
                 </Time>
               </span>
             </div>
-            <span className={styles.good} onClick={handleClick}>
+            <span
+              className="col-span-1 flex justify-end items-center mr-2"
+              onClick={handleClick}
+            >
               {click ? (
-                <BsHandThumbsUpFill color="#1ea7fd" size="1.5em" />
+                <BsHandThumbsUpFill
+                  color="#1ea7fd"
+                  size="1.5em"
+                  title="BsHandThumbsUpFill"
+                  className="cursor-pointer"
+                />
               ) : (
-                <BsHandThumbsUp size="1.5em" />
+                <BsHandThumbsUp
+                  size="1.5em"
+                  title="BsHandThumbsUp"
+                  className="cursor-pointer"
+                />
               )}
             </span>
           </div>
@@ -68,6 +79,6 @@ export const ArticleCard = ({ article }: Props): JSX.Element => {
  * @param date 日付
  * @returns フォーマットされた日付
  */
-const formatArticleCreatedAt = (date: Date): string => {
+export const formatArticleCreatedAt = (date: Date): string => {
   return format(date, "yyyy-MM-dd");
 };

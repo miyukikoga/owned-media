@@ -1,6 +1,11 @@
+import "./globals.css";
 import type { Metadata } from "next";
+import {
+  GoogleTagManager,
+  GoogleTagManagerId,
+} from "../components/atoms/GoogleTagManager";
+import { googleTagManagerId } from "../features/gtm";
 import { mediaName, description } from "@/constants/media";
-import "@/app/globals.css";
 
 export const metadata: Metadata = {
   title: {
@@ -34,6 +39,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
+      <head>
+        <GoogleTagManager
+          googleTagManagerId={googleTagManagerId as GoogleTagManagerId}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );

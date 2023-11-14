@@ -1,13 +1,13 @@
 import { type ReactNode } from "react";
-import styles from "./text.module.css";
+import { Size } from "../../../types/styles";
+import { getTextSizeClassName } from "../../../features/styles";
 
 type Props = {
-  size?: "small" | "medium" | "large";
+  size?: Size;
   children: ReactNode;
 };
 
 export const Text = ({ size = "medium", children }: Props): JSX.Element => {
-  return (
-    <span className={[styles.text, styles[size]].join(" ")}>{children}</span>
-  );
+  const textSize = getTextSizeClassName(size);
+  return <span className={`font-body ${textSize}`}>{children}</span>;
 };
