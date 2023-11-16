@@ -1,7 +1,6 @@
 import type { ComponentPropsWithoutRef } from "react";
 import { type ReactNode } from "react";
 import { Size } from "../../../types/styles";
-import { getTextSizeClassName } from "../../../features/styles";
 
 type Props = ComponentPropsWithoutRef<"time"> & {
   size?: Size;
@@ -15,8 +14,19 @@ export const Time = ({
 }: Props): JSX.Element => {
   const textSize = getTextSizeClassName(size);
   return (
-    <time className={`font-body ${textSize}`} {...props}>
+    <time className={`${textSize}`} {...props}>
       {children}
     </time>
   );
+};
+
+/**
+ * 文字サイズのクラス名を取得する
+ * @param size サイズ
+ * @returns クラス名
+ */
+const getTextSizeClassName = (size: Size): string => {
+  if (size === "small") return "text-xs";
+  if (size === "large") return "text-2xl";
+  return "text-base";
 };
