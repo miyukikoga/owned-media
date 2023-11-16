@@ -6,6 +6,7 @@ import {
 } from "../components/atoms/GoogleTagManager";
 import { googleTagManagerId } from "../features/gtm";
 import { mediaName, description } from "../constants/media";
+import { Header } from "@/components/organisms/Header";
 
 export const metadata: Metadata = {
   title: mediaName,
@@ -24,7 +25,10 @@ export default function RootLayout({
           googleTagManagerId={googleTagManagerId as GoogleTagManagerId}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <Header>{mediaName}</Header>
+        {children}
+      </body>
     </html>
   );
 }
