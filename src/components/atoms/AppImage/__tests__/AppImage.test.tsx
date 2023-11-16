@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { AppImage } from "../AppImage";
+import { AppImage } from "@/components/atoms/AppImage";
 
 describe("<AppImage />", () => {
   it("altテキストから対象のAppImageを取得できる", () => {

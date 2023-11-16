@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { Text } from "../Text";
+import { Text } from "@/components/atoms/Text";
 
 describe("<Text />", () => {
   it("テキストから対象のTextを取得できる", () => {

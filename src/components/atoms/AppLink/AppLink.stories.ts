@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { AppLink } from "./AppLink";
+import { AppLink } from "@/components/atoms/AppLink";
 
 const meta = {
   title: "App/AppLink",

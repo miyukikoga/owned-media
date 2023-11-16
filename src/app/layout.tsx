@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import {
   GoogleTagManager,
   GoogleTagManagerId,
-} from "../components/atoms/GoogleTagManager";
-import { googleTagManagerId } from "../features/gtm";
+} from "@/components/atoms/GoogleTagManager";
+import { googleTagManagerId } from "@/features/gtm";
 import { mediaName, description } from "@/constants/media";
 import { Header } from "@/components/organisms/Header";
 

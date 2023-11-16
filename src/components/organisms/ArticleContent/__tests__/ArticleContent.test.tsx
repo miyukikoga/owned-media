@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import { ArticleContent } from "../ArticleContent";
-import { Article } from "../../../../types/articles";
+import { ArticleContent } from "@/components/organisms/ArticleContent";
+import { Article } from "@/types/articles";
 
 const content = {
   id: "o5gu6ibjvb",

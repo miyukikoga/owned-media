@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Time } from "./Time";
+import { Time } from "@/components/atoms/Time";
 
 const meta = {
   title: "App/Time",

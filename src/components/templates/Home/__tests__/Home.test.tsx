@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import { Home } from "../Home";
-import { Articles } from "../../../../types/articles";
+import { Home } from "@/components/templates/Home";
+import { Articles } from "@/types/articles";
 
 const contents = [
   {

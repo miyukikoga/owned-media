@@ -1,7 +1,7 @@
 import { type ReactNode } from "react";
-import { Logo } from "../../atoms/Logo";
-import { AppLink } from "../../atoms/AppLink";
-import { HeaderMenu } from "../../molecules/HeaderMenu";
+import { Logo } from "@/components//atoms/Logo";
+import { AppLink } from "@/components//atoms/AppLink";
+import { HeaderMenu } from "@/components//molecules/HeaderMenu";
 
 type Props = {
   children: ReactNode;

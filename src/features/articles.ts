@@ -1,4 +1,4 @@
-import { Articles } from "../types/articles";
+import { Articles } from "@/types/articles";
 
 export async function fetchArticles(host: string): Promise<Articles> {
   const protocol = process?.env.NODE_ENV === "development" ? "http" : "https";

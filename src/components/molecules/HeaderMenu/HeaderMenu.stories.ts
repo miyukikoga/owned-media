@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { HeaderMenu } from "./HeaderMenu";
+import { HeaderMenu } from "@/components/molecules/HeaderMenu";
 
 const meta = {
   title: "App/HeaderMenu",

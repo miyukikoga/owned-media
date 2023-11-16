@@ -1,6 +1,6 @@
 import type { ComponentPropsWithoutRef } from "react";
 import { type ReactNode } from "react";
-import { Size } from "../../../types/styles";
+import { Size } from "@/types/styles";
 
 type Props = ComponentPropsWithoutRef<"time"> & {
   size?: Size;

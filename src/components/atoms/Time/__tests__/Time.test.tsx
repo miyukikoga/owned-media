@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { Time } from "../Time";
+import { Time } from "@/components/atoms/Time";
 
 describe("<Time />", () => {
   it("テキストから対象のTimeを取得できる", () => {

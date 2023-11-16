@@ -1,5 +1,5 @@
 import { type ReactNode } from "react";
-import { Size, Weight } from "../../../types/styles";
+import { Size, Weight } from "@/types/styles";
 
 type Props = {
   size?: Size;

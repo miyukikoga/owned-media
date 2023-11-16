@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { Logo } from "../Logo";
+import { Logo } from "@/components/atoms/Logo";
 
 describe("<Logo />", () => {
   it("テキストから対象のLogoを取得できる", () => {

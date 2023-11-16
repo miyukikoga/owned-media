@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { List } from "../List";
+import { List } from "@/components/atoms/List";
 
 describe("<List />", () => {
   it("リストアイテムから対象のListを取得できる", () => {
