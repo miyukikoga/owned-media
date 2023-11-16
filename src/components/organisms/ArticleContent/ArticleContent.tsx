@@ -13,9 +13,7 @@ export const ArticleContent = ({ article }: Props): JSX.Element => {
       <div className="col-span-1 flex justify-center items-center m-5">
         <AppImage alt="article" src={article.eyeCatch} />
       </div>
-      <p>
-        <Text>{parse(article.content)}</Text>
-      </p>
+      <Text>{parse(article.content)}</Text>
     </section>
   );
 };
