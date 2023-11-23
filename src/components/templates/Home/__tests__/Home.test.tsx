@@ -2,6 +2,7 @@ import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import { Home } from "../Home";
 import { Articles } from "../../../../types/articles";
+import { Categories } from "@/types/categories";
 
 const contents = [
   {
@@ -24,9 +25,14 @@ const contents = [
   },
 ] as Articles;
 
+const categories = [
+  { id: "q2r8qu6t-l", name: "グルメ" },
+  { id: "hpzd5iyz7h", name: "アニマル" },
+] as Categories;
+
 describe("<Home />", () => {
   it("対象のHomeを取得できる", () => {
-    render(<Home articles={contents} />);
+    render(<Home articles={contents} categories={categories} />);
     const articles = screen.getAllByRole("article");
     for (const [index, article] of Object.entries(articles)) {
       expect(article).toBeInTheDocument();

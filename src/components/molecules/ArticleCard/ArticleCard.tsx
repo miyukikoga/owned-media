@@ -23,14 +23,14 @@ export const ArticleCard = ({ article }: Props): JSX.Element => {
   return (
     <article>
       <div className="grid grid-cols-3 border-t">
-        <AppLink href={"/article/" + article.id}>
-          <div className="col-span-1 flex justify-center items-center m-5">
+        <div className="col-span-1 flex justify-center items-center m-5">
+          <AppLink href={`/articles/${article.id}`}>
             <AppImage alt="article" src={article.eyeCatch} />
-          </div>
-        </AppLink>
+          </AppLink>
+        </div>
         <div className="col-span-2 m-5">
           <h1>
-            <AppLink href={"/article/" + article.id}>
+            <AppLink href={`/articles/${article.id}`}>
               <Text size="large">{article.title}</Text>
             </AppLink>
           </h1>

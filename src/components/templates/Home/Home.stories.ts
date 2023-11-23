@@ -37,5 +37,9 @@ export const Default: Story = {
           "https://images.microcms-assets.io/assets/cab7c47596804df6b0612f18468b57a8/6b91e158bb4244b68d5004de7753094c/blog-template.png",
       },
     ],
+    categories: [
+      { id: "q2r8qu6t-l", name: "グルメ" },
+      { id: "hpzd5iyz7h", name: "アニマル" },
+    ],
   },
 };
