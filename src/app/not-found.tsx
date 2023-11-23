@@ -8,7 +8,9 @@ export default function NotFound() {
       <p>
         <Text>ページが見つかりません</Text>
       </p>
-      <AppLink href="/">Return Home</AppLink>
+      <AppLink href="/" needUnderline={true}>
+        Return Home
+      </AppLink>
     </div>
   );
 }

@@ -1,16 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Header } from "./Header";
+import { CategoryModal } from "@/components/organisms/CategoryModal";
 
 const meta = {
-  title: "App/Header",
-  component: Header,
+  title: "App/CategoryModal",
+  component: CategoryModal,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-  argTypes: { children: { control: "text" } },
-} satisfies Meta<typeof Header>;
+  argTypes: {},
+} satisfies Meta<typeof CategoryModal>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -21,6 +21,5 @@ export const Default: Story = {
       { id: "q2r8qu6t-l", name: "グルメ" },
       { id: "hpzd5iyz7h", name: "アニマル" },
     ],
-    children: "Title",
   },
 };
