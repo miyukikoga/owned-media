@@ -22,8 +22,9 @@ export const Default: Story = {
         id: "o5gu6ibjvb",
         title: "たけのこ",
         content: "たけのこ、美味しいね",
-        category: "グルメ",
+        category: { id: "q2r8qu6t-l", name: "グルメ" },
         createdAt: "2023-04-05T09:23:31.664Z",
+        updatedAt: "2023-10-10T09:23:31.664Z",
         eyeCatch:
           "https://images.microcms-assets.io/assets/cab7c47596804df6b0612f18468b57a8/6b91e158bb4244b68d5004de7753094c/blog-template.png",
       },
@@ -31,15 +32,12 @@ export const Default: Story = {
         id: "2ppgmb350ytz",
         title: "初めてのブログ",
         content: "初めまして。",
-        category: "日常",
+        category: { id: "hpzd5iyz7h", name: "アニマル" },
         createdAt: "2023-04-05T21:53:43.952Z",
+        updatedAt: "2023-10-10T09:23:31.664Z",
         eyeCatch:
           "https://images.microcms-assets.io/assets/cab7c47596804df6b0612f18468b57a8/6b91e158bb4244b68d5004de7753094c/blog-template.png",
       },
-    ],
-    categories: [
-      { id: "q2r8qu6t-l", name: "グルメ" },
-      { id: "hpzd5iyz7h", name: "アニマル" },
     ],
   },
 };

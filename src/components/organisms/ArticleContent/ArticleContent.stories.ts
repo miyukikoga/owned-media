@@ -1,16 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { ArticleCard } from "./ArticleCard";
+import { ArticleContent } from "./ArticleContent";
 
 const meta = {
-  title: "App/Article",
-  component: ArticleCard,
+  title: "App/ArticleContent",
+  component: ArticleContent,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
   argTypes: {},
-} satisfies Meta<typeof ArticleCard>;
+} satisfies Meta<typeof ArticleContent>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -19,8 +19,8 @@ export const Default: Story = {
   args: {
     article: {
       id: "o5gu6ibjvb",
-      title: "ねことたけのこ",
-      content: "ねこがたけのこを食べる",
+      title: "たけのこ",
+      content: "たけのこ、美味しいね",
       category: { id: "q2r8qu6t-l", name: "グルメ" },
       createdAt: "2023-04-05T09:23:31.664Z",
       updatedAt: "2023-10-10T09:23:31.664Z",

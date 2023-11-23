@@ -2,12 +2,12 @@
 
 import React, { useState } from "react";
 import { BsHandThumbsUpFill, BsHandThumbsUp } from "react-icons/bs";
-import { format } from "date-fns";
 import { AppLink } from "../../atoms/AppLink";
 import { AppImage } from "../../atoms/AppImage";
 import { Text } from "../../atoms/Text";
 import { Time } from "../../atoms/Time";
 import { Article } from "../../../types/articles";
+import { formatArticleCreatedAt } from "@/features/article";
 
 type Props = {
   article: Article;
@@ -22,7 +22,7 @@ export const ArticleCard = ({ article }: Props): JSX.Element => {
 
   return (
     <article>
-      <div className="grid grid-cols-3 border-t">
+      <div className="grid grid-cols-3 border-b">
         <div className="col-span-1 flex justify-center items-center m-5">
           <AppLink href={`/articles/${article.id}`}>
             <AppImage alt="article" src={article.eyeCatch} />
@@ -40,7 +40,7 @@ export const ArticleCard = ({ article }: Props): JSX.Element => {
           <div className="grid grid-cols-3">
             <div className="col-span-2 m-2">
               <div className="mt-2">
-                <Text size="small">{article.category}</Text>
+                <Text size="small">{article.category.name}</Text>
               </div>
               <span className="mt-2">
                 <Time size="small" dateTime={article.createdAt}>
@@ -54,7 +54,7 @@ export const ArticleCard = ({ article }: Props): JSX.Element => {
             >
               {click ? (
                 <BsHandThumbsUpFill
-                  color="#1ea7fd"
+                  color="#06B6D4"
                   size="1.5em"
                   title="BsHandThumbsUpFill"
                   className="cursor-pointer"
@@ -72,13 +72,4 @@ export const ArticleCard = ({ article }: Props): JSX.Element => {
       </div>
     </article>
   );
-};
-
-/**
- * 作成日をフォーマットする
- * @param date 日付
- * @returns フォーマットされた日付
- */
-export const formatArticleCreatedAt = (date: Date): string => {
-  return format(date, "yyyy-MM-dd");
 };

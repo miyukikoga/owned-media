@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import { Size } from "../../../types/styles";
-import { getTextSizeClassName } from "../../../features/styles";
 
 type Props = {
   horizontal?: boolean;
@@ -26,4 +25,15 @@ export const List = ({
       })}
     </ul>
   );
+};
+
+/**
+ * 文字サイズのクラス名を取得する
+ * @param size サイズ
+ * @returns クラス名
+ */
+const getTextSizeClassName = (size: Size): string => {
+  if (size === "small") return "text-xs";
+  if (size === "large") return "text-2xl";
+  return "text-base";
 };

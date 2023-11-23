@@ -1,5 +1,5 @@
 import { createClient } from "microcms-js-sdk";
-import { MicroCMSContent } from "../../../types/microCms";
+import { isMicroCMSContent } from "@/features/microCms";
 
 class EnvironmentVariablesError extends Error {
   static {
@@ -53,31 +53,12 @@ export async function GET() {
       id: element.id,
       title: element.title,
       content: content,
-      category: element.category.name,
+      category: { id: element.category.id, name: element.category.name },
       createdAt: element.publishedAt,
+      updatedAt: element.updatedAt,
       eyeCatch: element.eyecatch.url,
     };
   });
 
   return Response.json(responseBody);
 }
-
-/**
- * microCMS APIから返却されたコンテンツデータの型ガードを行う
- * @param content コンテンツデータ
- * @returns microCMS APIから返却されたコンテンツデータかどうか
- */
-const isMicroCMSContent = (content: unknown): content is MicroCMSContent => {
-  if (!content) return false;
-  return (
-    content.hasOwnProperty("id") &&
-    content.hasOwnProperty("createdAt") &&
-    content.hasOwnProperty("updatedAt") &&
-    content.hasOwnProperty("publishedAt") &&
-    content.hasOwnProperty("revisedAt") &&
-    content.hasOwnProperty("title") &&
-    content.hasOwnProperty("content") &&
-    content.hasOwnProperty("eyecatch") &&
-    content.hasOwnProperty("category")
-  );
-};
