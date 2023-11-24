@@ -18,7 +18,7 @@ export const List = ({
     <ul>
       {childrenList.map((children, i) => {
         return (
-          <li className={`${textSize} ${sort} list-none`} key={i}>
+          <li className={`${textSize} ${sort} m-2 list-none`} key={i}>
             <span>{children}</span>
           </li>
         );

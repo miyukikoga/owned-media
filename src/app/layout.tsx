@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import {
   GoogleTagManager,
   GoogleTagManagerId,
@@ -7,6 +8,13 @@ import {
 import { googleTagManagerId } from "@/features/gtm";
 import { mediaName, description } from "@/constants/media";
 import { Header } from "@/components/organisms/Header";
+import { fetchCategories } from "@/features/categories";
+
+class ExtractHostNameError extends Error {
+  static {
+    this.prototype.name = "ExtractHostNameError";
+  }
+}
 
 export const metadata: Metadata = {
   title: {
@@ -33,11 +41,16 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const host = headers().get("host");
+  if (!host) throw new ExtractHostNameError("Failed to get host");
+
+  const categories = await fetchCategories(host);
+
   return (
     <html lang="ja">
       <head>
@@ -46,7 +59,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <Header>{mediaName}</Header>
+        <Header categories={categories}>{mediaName}</Header>
         {children}
       </body>
     </html>

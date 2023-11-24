@@ -23,3 +23,11 @@ export const Default: Story = {
     href: "http://localhost:6006/",
   },
 };
+
+export const Underline: Story = {
+  args: {
+    needUnderline: true,
+    children: "Anchor",
+    href: "http://localhost:6006/",
+  },
+};
