@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { AppImage } from "./AppImage";
+import { AppImage } from "@/components/atoms/AppImage";
 import imageFile from "../../../../public/profile.png";
 
 const meta = {

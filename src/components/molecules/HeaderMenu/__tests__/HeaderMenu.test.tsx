@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import { HeaderMenu } from "../HeaderMenu";
+import { HeaderMenu } from "@/components/molecules/HeaderMenu";
 
 describe("<HeaderMenu />", () => {
   it("テキストから対象のHeaderMenuを取得できる", () => {

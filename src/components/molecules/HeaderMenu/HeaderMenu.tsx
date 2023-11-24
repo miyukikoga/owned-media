@@ -1,5 +1,5 @@
 import { BsPersonCircle } from "react-icons/bs";
-import { AppLink } from "../../atoms/AppLink";
+import { AppLink } from "@/components/atoms/AppLink";
 
 type Props = {};
 

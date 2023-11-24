@@ -1,9 +1,9 @@
 /**
  * @jest-environment node
  */
-import { fetchArticles } from "../articles";
-import { server } from "../../mocks/node";
-import { articlesResponse } from "../../mocks/api/articles/response";
+import { fetchArticles } from "@/features/articles";
+import { server } from "@/mocks/node";
+import { articlesResponse } from "@/mocks/api/articles/response";
 
 beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());

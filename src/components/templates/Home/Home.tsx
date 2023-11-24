@@ -1,5 +1,5 @@
-import { ArticleCards } from "../../organisms/ArticleCards";
-import { Articles } from "../../../types/articles";
+import { ArticleCards } from "@/components/organisms/ArticleCards";
+import { Articles } from "@/types/articles";
 
 type Props = {
   articles: Articles;

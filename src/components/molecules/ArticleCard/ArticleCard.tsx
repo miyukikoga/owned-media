@@ -2,11 +2,11 @@
 
 import React, { useState } from "react";
 import { BsHandThumbsUpFill, BsHandThumbsUp } from "react-icons/bs";
-import { AppLink } from "../../atoms/AppLink";
-import { AppImage } from "../../atoms/AppImage";
-import { Text } from "../../atoms/Text";
-import { Time } from "../../atoms/Time";
-import { Article } from "../../../types/articles";
+import { AppLink } from "@/components/atoms/AppLink";
+import { AppImage } from "@/components/atoms/AppImage";
+import { Text } from "@/components/atoms/Text";
+import { Time } from "@/components/atoms/Time";
+import { Article } from "@/types/articles";
 import { formatArticleCreatedAt } from "@/features/article";
 
 type Props = {

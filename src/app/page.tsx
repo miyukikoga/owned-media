@@ -1,6 +1,6 @@
 import { headers } from "next/headers";
-import { Home } from "../components/templates/Home";
-import { fetchArticles } from "../features/articles";
+import { Home } from "@/components/templates/Home";
+import { fetchArticles } from "@/features/articles";
 
 class ExtractHostNameError extends Error {
   static {

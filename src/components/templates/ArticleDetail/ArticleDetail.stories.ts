@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { ArticleDetail } from "./ArticleDetail";
+import { ArticleDetail } from "@/components/templates/ArticleDetail";
 
 const meta = {
   title: "App/ArticleDetail",

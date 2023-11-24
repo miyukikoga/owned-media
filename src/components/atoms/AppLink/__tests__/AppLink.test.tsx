@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { AppLink } from "../AppLink";
+import { AppLink } from "@/components/atoms/AppLink";
 
 describe("<AppLink />", () => {
   it("リンクテキストから対象のAppLinkを取得できる", () => {

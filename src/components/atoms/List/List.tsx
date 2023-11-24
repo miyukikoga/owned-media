@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Size } from "../../../types/styles";
+import { Size } from "@/types/styles";
 
 type Props = {
   horizontal?: boolean;

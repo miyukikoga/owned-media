@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import { ArticleCards } from "../ArticleCards";
-import { Articles } from "../../../../types/articles";
+import { ArticleCards } from "@/components/organisms/ArticleCards";
+import { Articles } from "@/types/articles";
 import { formatArticleCreatedAt } from "@/features/article";
 
 const contents = [

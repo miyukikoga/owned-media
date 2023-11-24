@@ -1,8 +1,8 @@
 /**
  * @jest-environment node
  */
-import { fetchArticle, formatArticleCreatedAt } from "../article";
-import { server } from "../../mocks/node";
+import { fetchArticle, formatArticleCreatedAt } from "@/features/article";
+import { server } from "@/mocks/node";
 import { articlesResponse } from "@/mocks/api/articles/response";
 
 beforeAll(() => server.listen());

@@ -1,8 +1,8 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { ArticleCard } from "../ArticleCard";
-import { Article } from "../../../../types/articles";
+import { ArticleCard } from "@/components/molecules/ArticleCard";
+import { Article } from "@/types/articles";
 import { formatArticleCreatedAt } from "@/features/article";
 
 const content = {
