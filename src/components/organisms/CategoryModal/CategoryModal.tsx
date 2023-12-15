@@ -16,7 +16,7 @@ type Props = {
 export const CategoryModal = ({ categories }: Props): JSX.Element => {
   let [isOpen, setIsOpen] = useState(false);
   const categoryList = categories.map((category, index) => (
-    <CategoryLink category={category} key={index} />
+    <CategoryLink category={category} key={index} handleClick={closeModal} />
   ));
 
   function closeModal() {

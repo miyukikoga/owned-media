@@ -19,7 +19,7 @@ class FetchedBlogsTypeError extends Error {
   }
 }
 
-export async function GET() {
+export async function GET(req: Request) {
   if (!process.env.MICRO_CMS_DOMAIN || !process.env.MICRO_CMS_API_KEY)
     throw new EnvironmentVariablesError("No environment variables");
 
@@ -28,11 +28,18 @@ export async function GET() {
     apiKey: process.env.MICRO_CMS_API_KEY,
   });
 
+  const { searchParams } = new URL(req.url);
+  const categoryId = searchParams.get("category");
+
+  const endpoint = categoryId
+    ? `blogs?filters=category[equals]${categoryId}`
+    : "blogs";
+
   const res = await client.get({
     customRequestInit: {
       cache: "no-store",
     },
-    endpoint: "blogs",
+    endpoint: endpoint,
   });
 
   if (!res) {

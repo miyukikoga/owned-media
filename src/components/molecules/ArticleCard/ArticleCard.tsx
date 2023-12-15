@@ -22,7 +22,7 @@ export const ArticleCard = ({ article }: Props): JSX.Element => {
 
   return (
     <article>
-      <div className="grid grid-cols-3 border-b">
+      <div className="grid grid-cols-3">
         <div className="col-span-1 flex justify-center items-center m-5">
           <AppLink href={`/articles/${article.id}`}>
             <AppImage alt="article" src={article.eyeCatch} />
@@ -70,6 +70,7 @@ export const ArticleCard = ({ article }: Props): JSX.Element => {
           </div>
         </div>
       </div>
+      <hr className="border-gray-500 border-1 my-3" />
     </article>
   );
 };

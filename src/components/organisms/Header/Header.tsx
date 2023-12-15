@@ -30,7 +30,7 @@ export const Header = ({ categories, children }: Props): JSX.Element => {
           <HeaderMenu />
         </div>
       </div>
-      <hr className="border-gray-500 border-1 mb-5" />
+      <hr className="border-gray-500 border-1" />
     </>
   );
 };
