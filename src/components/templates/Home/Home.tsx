@@ -7,7 +7,7 @@ type Props = {
 
 export const Home = ({ articles }: Props): JSX.Element => {
   return (
-    <div className="mx-10">
+    <div className="mx-3">
       <ArticleCards articles={articles} />
     </div>
   );

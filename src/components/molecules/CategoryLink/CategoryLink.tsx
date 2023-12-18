@@ -4,11 +4,12 @@ import { Category } from "../../../types/categories";
 
 type Props = {
   category: Category;
+  handleClick: () => void;
 };
 
-export const CategoryLink = ({ category }: Props): JSX.Element => {
+export const CategoryLink = ({ category, handleClick }: Props): JSX.Element => {
   return (
-    <AppLink href={`/categories/${category.id}`}>
+    <AppLink href={`/categories/${category.id}`} onClick={handleClick}>
       <Text>{category.name}</Text>
     </AppLink>
   );
