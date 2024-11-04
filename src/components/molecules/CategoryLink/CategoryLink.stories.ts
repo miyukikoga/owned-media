@@ -15,11 +15,14 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+const handleClick = () => {};
+
 export const Default: Story = {
   args: {
     category: {
       id: "hu7ctlsefzq",
       name: "グルメ",
     },
+    handleClick,
   },
 };
