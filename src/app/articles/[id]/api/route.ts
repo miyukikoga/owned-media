@@ -21,7 +21,7 @@ class FetchedBlogsDetailTypeError extends Error {
 
 export async function GET(
   _request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   if (!process.env.MICRO_CMS_DOMAIN || !process.env.MICRO_CMS_API_KEY)
     throw new EnvironmentVariablesError("No environment variables");
@@ -31,21 +31,21 @@ export async function GET(
     apiKey: process.env.MICRO_CMS_API_KEY,
   });
 
-  const articleId = params.id;
+  const { id } = await params;
   const res = await client.get({
     customRequestInit: {
       cache: "no-store",
     },
-    endpoint: `blogs/${articleId}`,
+    endpoint: `blogs/${id}`,
   });
 
   if (!res) {
-    throw new FetchBlogsDetailError(`Failed to fetch data blogs/${articleId}`);
+    throw new FetchBlogsDetailError(`Failed to fetch data blogs/${id}`);
   }
 
   if (!isMicroCMSContent(res))
     throw new FetchedBlogsDetailTypeError(
-      `GET blogs/${articleId} APIのレスポンスの型が間違っています`
+      `GET blogs/${id} APIのレスポンスの型が間違っています`
     );
 
   const responseBody = {

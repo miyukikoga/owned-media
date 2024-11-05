@@ -46,7 +46,8 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const host = headers().get("host");
+  const headersList = await headers();
+  const host = headersList.get("host");
   if (!host) throw new ExtractHostNameError("Failed to get host");
 
   const categories = await fetchCategories(host);

@@ -1,11 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  experimental: {
-    instrumentationHook: true,
-  },
+import type { NextConfig } from "next";
 
+const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
@@ -19,8 +14,6 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-
-// Injected content via Sentry wizard below
 
 const { withSentryConfig } = require("@sentry/nextjs");
 
