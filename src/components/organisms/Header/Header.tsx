@@ -10,7 +10,7 @@ type Props = {
   children: ReactNode;
 };
 
-export const Header = ({ categories, children }: Props): JSX.Element => {
+export const Header = ({ categories, children }: Props) => {
   return (
     <>
       <div className="grid grid-cols-2 my-3">

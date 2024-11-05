@@ -3,7 +3,7 @@ import { profile } from "@/constants/media";
 
 type Props = {};
 
-export const ProfileTable = ({}: Props): JSX.Element => {
+export const ProfileTable = ({}: Props) => {
   return (
     <table className="w-2/3">
       <thead></thead>

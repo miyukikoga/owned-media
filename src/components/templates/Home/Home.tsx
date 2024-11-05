@@ -5,7 +5,7 @@ type Props = {
   articles: Articles;
 };
 
-export const Home = ({ articles }: Props): JSX.Element => {
+export const Home = ({ articles }: Props) => {
   return (
     <div className="mx-3">
       <ArticleCards articles={articles} />

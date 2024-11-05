@@ -11,7 +11,7 @@ export const AppLink = ({
   needUnderline = false,
   children,
   ...props
-}: Props): JSX.Element => {
+}: Props) => {
   const underline = needUnderline ? "underline" : "";
   return (
     <Link className={`cursor-pointer ${underline}`} prefetch={false} {...props}>

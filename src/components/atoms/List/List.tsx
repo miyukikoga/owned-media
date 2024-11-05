@@ -11,7 +11,7 @@ export const List = ({
   horizontal = false,
   size = "medium",
   childrenList,
-}: Props): JSX.Element => {
+}: Props) => {
   const textSize = getTextSizeClassName(size);
   const sort = horizontal ? "inline-block mx-2" : "";
   return (

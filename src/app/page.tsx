@@ -8,8 +8,9 @@ class ExtractHostNameError extends Error {
   }
 }
 
-export default async function Page(): Promise<JSX.Element> {
-  const host = headers().get("host");
+export default async function Page() {
+  const headersList = await headers();
+  const host = headersList.get("host");
   if (!host) throw new ExtractHostNameError("Failed to get host");
 
   const articles = await fetchArticles(host);

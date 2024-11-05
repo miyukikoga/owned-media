@@ -7,7 +7,7 @@ type Props = {
   article: Article;
 };
 
-export const ArticleDetail = ({ article }: Props): JSX.Element => {
+export const ArticleDetail = ({ article }: Props) => {
   return (
     <article className="md:grid grid-cols-4 mx-5">
       <div className="col-span-1" />

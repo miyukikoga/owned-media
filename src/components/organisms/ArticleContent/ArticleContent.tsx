@@ -7,7 +7,7 @@ type Props = {
   article: Article;
 };
 
-export const ArticleContent = ({ article }: Props): JSX.Element => {
+export const ArticleContent = ({ article }: Props) => {
   return (
     <section>
       <div className="col-span-1 flex justify-center items-center m-5">

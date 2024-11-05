@@ -7,7 +7,7 @@ type Props = {
   handleClick: () => void;
 };
 
-export const CategoryLink = ({ category, handleClick }: Props): JSX.Element => {
+export const CategoryLink = ({ category, handleClick }: Props) => {
   return (
     <AppLink href={`/categories/${category.id}`} onClick={handleClick}>
       <Text>{category.name}</Text>

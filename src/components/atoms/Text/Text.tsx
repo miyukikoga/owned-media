@@ -11,7 +11,7 @@ export const Text = ({
   size = "medium",
   weight = "medium",
   children,
-}: Props): JSX.Element => {
+}: Props) => {
   const textSize = getTextSizeClassName(size);
   const textWeight = getTextWeightClassName(weight);
   return <span className={`${textSize} ${textWeight}`}>{children}</span>;

@@ -8,7 +8,7 @@ type Props = {
   article: Article;
 };
 
-export const ArticleHeader = ({ article }: Props): JSX.Element => {
+export const ArticleHeader = ({ article }: Props) => {
   const formattedCreatedAt = formatArticleCreatedAt(
     new Date(article.createdAt)
   );
