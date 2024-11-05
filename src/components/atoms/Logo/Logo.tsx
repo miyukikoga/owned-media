@@ -6,7 +6,7 @@ type Props = {
   children: ReactNode;
 };
 
-export const Logo = ({ size = "medium", children }: Props): JSX.Element => {
+export const Logo = ({ size = "medium", children }: Props) => {
   const textSize = getTextSizeClassName(size);
   return (
     <p

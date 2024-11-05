@@ -13,7 +13,7 @@ type Props = {
   categories: Categories;
 };
 
-export const CategoryModal = ({ categories }: Props): JSX.Element => {
+export const CategoryModal = ({ categories }: Props) => {
   let [isOpen, setIsOpen] = useState(false);
   const categoryList = categories.map((category, index) => (
     <CategoryLink category={category} key={index} handleClick={closeModal} />

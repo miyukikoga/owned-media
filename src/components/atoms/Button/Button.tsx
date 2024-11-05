@@ -6,11 +6,7 @@ type Props = ComponentPropsWithoutRef<"button"> & {
   label: string;
 };
 
-export const Button = ({
-  size = "medium",
-  label,
-  ...props
-}: Props): JSX.Element => {
+export const Button = ({ size = "medium", label, ...props }: Props) => {
   const textSize = getTextSizeClassName(size);
   return (
     <button

@@ -7,12 +7,7 @@ type Props = ComponentPropsWithoutRef<typeof Image> & {
   sizePx?: number;
 };
 
-export const AppImage = ({
-  radius = false,
-  sizePx = 400,
-  alt,
-  src,
-}: Props): JSX.Element => {
+export const AppImage = ({ radius = false, sizePx = 400, alt, src }: Props) => {
   const mode = radius ? "rounded-full" : "";
   return (
     <div className={`cursor-pointer`}>

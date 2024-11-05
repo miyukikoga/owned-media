@@ -7,7 +7,7 @@ type Props = {
   articles: Articles;
 };
 
-export const SearchResults = ({ articles }: Props): JSX.Element => {
+export const SearchResults = ({ articles }: Props) => {
   if (articles.length === 0) {
     return (
       <div>

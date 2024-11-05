@@ -3,7 +3,7 @@ import { AppLink } from "@/components/atoms/AppLink";
 
 type Props = {};
 
-export const HeaderMenu = ({}: Props): JSX.Element => {
+export const HeaderMenu = ({}: Props) => {
   return (
     <div>
       <AppLink href="/profile">

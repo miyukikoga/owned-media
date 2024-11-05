@@ -4,18 +4,18 @@ type Props = {
   pathList: { name: string; href: string }[];
 };
 
-export const TopicPath = ({ pathList }: Props): JSX.Element => {
+export const TopicPath = ({ pathList }: Props) => {
   return (
     <>
       <div className="my-1 mx-5">
         {pathList.map((path, index) => {
           return (
-            <>
+            <span key={index}>
               {index !== 0 && `  ＞  `}
               <AppLink href={path.href} key={index}>
                 {path.name}
               </AppLink>
-            </>
+            </span>
           );
         })}
       </div>
