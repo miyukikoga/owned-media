@@ -1,6 +1,6 @@
 import { headers } from "next/headers";
-import { SearchResults } from "@/components/templates/SearchResults";
-import { fetchArticlesByCategory } from "@/features/articles";
+import { SearchResults } from "@/features/search/components/SearchResults";
+import { fetchArticlesByCategory } from "@/features/articles/functions/articles";
 
 class ExtractHostNameError extends Error {
   static {
