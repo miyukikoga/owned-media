@@ -1,5 +1,5 @@
 import { createClient } from "microcms-js-sdk";
-import { isMicroCMSContent } from "@/features/microCms";
+import { isMicroCMSContent } from "@/libs/microCms";
 
 class EnvironmentVariablesError extends Error {
   static {

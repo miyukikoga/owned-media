@@ -1,6 +1,6 @@
 import { headers } from "next/headers";
-import { Home } from "@/components/templates/Home";
-import { fetchArticles } from "@/features/articles";
+import { ArticleCards } from "@/features/articles/components/ArticleCards";
+import { fetchArticles } from "@/features/articles/functions/articles";
 
 class ExtractHostNameError extends Error {
   static {
@@ -15,5 +15,9 @@ export default async function Page() {
 
   const articles = await fetchArticles(host);
 
-  return <Home articles={articles} />;
+  return (
+    <div className="mx-3">
+      <ArticleCards articles={articles} />
+    </div>
+  );
 }

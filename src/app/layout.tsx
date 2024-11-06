@@ -4,11 +4,11 @@ import { headers } from "next/headers";
 import {
   GoogleTagManager,
   GoogleTagManagerId,
-} from "@/components/atoms/GoogleTagManager";
-import { googleTagManagerId } from "@/features/gtm";
-import { mediaName, description } from "@/constants/media";
-import { Header } from "@/components/organisms/Header";
-import { fetchCategories } from "@/features/categories";
+} from "@/app/components/elements/GoogleTagManager";
+import { googleTagManagerId } from "@/libs/gtm";
+import { mediaName, description } from "@/features/constants/media";
+import { Header } from "@/app/components/layouts/Header";
+import { fetchCategories } from "@/features/categories/functions/categories";
 
 class ExtractHostNameError extends Error {
   static {

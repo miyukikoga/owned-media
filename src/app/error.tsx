@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import * as Sentry from "@sentry/nextjs";
-import { Button } from "@/components/atoms/Button";
+import { Button } from "@/app/components/elements/Button";
 
 export default function Error({
   error,

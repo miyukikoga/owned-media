@@ -1,5 +1,5 @@
-import { AppLink } from "@/components/atoms/AppLink";
-import { Text } from "@/components/atoms/Text";
+import { AppLink } from "@/app/components/elements/AppLink";
+import { Text } from "@/app/components/elements/Text";
 
 export default function NotFound() {
   return (
